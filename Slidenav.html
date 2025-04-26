@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        body{
+            margin-top: 50px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            background-color: hotpink;
+            position: fixed;
+            padding: 0 10px;
+            top: 0;
+            left: 0;
+        }
+        .logo{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 0 40px;
+            text-transform: uppercase;
+        }
+        .header button{
+            height: 30px;
+            width: 50px;
+            border: none;
+            background: none;
+            outline: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 5px;
+            flex-shrink: 0;
+            cursor: pointer;
+            align-items: center;
+            
+        }
+        .bar{
+            height: 3px;
+            width: 100%;
+            background-color: white;
+        }
+        .links{
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transform: translateX(-250px);
+        }
+        .link{
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        .link.active,
+        .link:hover
+        {
+            background-color: #ccc;
+            color:purple;
+
+        }
+        .open.links{
+            transform: translateX(0);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+        }
+        .content{
+            padding: 20px;
+            text-align: justify;
+        
+        }
+        .content p{
+            margin: 20px;
+        }
+        .overlay{
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            backdrop-filter: blur(2px);
+            visibility: hidden;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .open.overlay{
+            visibility:visible;
+            opacity: 1;
+
+        }
+    </style>
+    <div class="header">
+        <div class="logo">SlideNav</div>
+        <button id="btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+    <div class="side-nav open">
+        <div class="links">
+            <a href="#" class="link active">Home</a>
+            <a href="./skewnav.html" class="link">About</a>
+            <a href="#" class="link">Download</a>
+            <a href="#" class="link">Contact</a>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <div class="content">
+        <h1>Sample paragraph</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nisi, velit, eum aut neque modi laborum debitis recusandae mollitia repellendus tempora. Cupiditate doloremque, vero dicta id illo voluptatem reprehenderit velit. Eligendi voluptates numquam similique rerum iste ab modi perferendis, tempore, doloribus voluptatibus voluptatum eius dolorum esse in possimus aliquam dolor voluptate officiis nemo necessitatibus, reiciendis fugit nihil. Corporis, tempora iste a quo debitis voluptatem eos necessitatibus aut pariatur inventore quibusdam ipsa quisquam quis delectus maiores error culpa nostrum. Cumque, placeat ipsam! Quos eligendi sit, sapiente labore mollitia distinctio, facere voluptatibus dignissimos nobis error assumenda possimus in obcaecati voluptatum velit est odio incidunt aliquid cum suscipit ab magni quo ipsam eveniet? Voluptas, iure placeat eligendi commodi dignissimos quisquam nisi aperiam laborum ducimus. Minima, non. Beatae dignissimos sequi ut voluptatum dicta aliquid iusto velit, dolorum impedit commodi quia, saepe nesciunt tempore amet modi a nobis nisi quasi nam dolorem atque temporibus? Harum inventore voluptatum necessitatibus quis hic dolore ipsa voluptate quaerat dolores modi commodi enim sunt nihil obcaecati aliquid quia ad, expedita odit voluptates unde. Error excepturi non necessitatibus voluptas quae veritatis similique cupiditate perspiciatis? Commodi officia, amet laboriosam placeat adipisci doloremque mollitia repudiandae accusamus recusandae voluptatibus, magnam excepturi, ad architecto modi.
+
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur saepe necessitatibus ab possimus, reiciendis cum fugit a dignissimos dolor ullam fuga, suscipit iure ad natus nulla voluptatem architecto dicta, temporibus praesentium voluptatum quibusdam! Exercitationem illo sit laudantium voluptate iure veritatis nostrum provident eius numquam minus. Vitae explicabo aliquam obcaecati expedita cumque iure ratione veniam unde, tempore illum, rerum maxime in! Harum, culpa. Praesentium illum unde ab facere animi dignissimos ipsam, rerum tempora laboriosam quos ipsa eius voluptatem quae odio officia incidunt ratione distinctio sunt veritatis odit delectus quis consectetur exercitationem voluptatibus. Alias cumque exercitationem sapiente earum repudiandae accusamus dolorem eveniet maxime, quibusdam veritatis quaerat natus et nemo eum odio sequi! Vel est ex provident alias, dolor ducimus accusantium dolorum quasi quisquam fuga beatae accusamus! Mollitia iusto quos qui perferendis distinctio, commodi placeat tenetur, saepe aut numquam impedit facere. Molestiae deserunt dolores expedita tempora eligendi accusamus pariatur amet vel possimus mollitia, sit enim aliquam illum aspernatur nisi, delectus quas a architecto nemo tempore blanditiis fugit porro minima commodi. Ipsam possimus doloribus, eveniet omnis quod quas hic? Sequi nulla, nemo in exercitationem deleniti voluptate. Dolorem quam necessitatibus expedita recusandae nesciunt porro quae alias explicabo nam. Laborum, quo est. Adipisci, omnis dignissimos.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi esse reiciendis inventore unde nobis aliquam odit maxime enim, sapiente ratione quia fugit dolore voluptatum iure tenetur soluta optio saepe distinctio dolores rem. Id neque enim culpa perferendis inventore, sequi beatae cupiditate recusandae magnam odio adipisci nemo sapiente animi dignissimos esse nisi quod, ipsum asperiores. Laborum nostrum libero dolorem distinctio? Soluta debitis odit tempore consequatur a magnam nam in quod, illum dolor ex repudiandae enim quo labore iusto odio minus id doloremque, natus molestiae. Tenetur asperiores libero tempora illum molestias minima numquam architecto quae voluptatem aperiam vitae iusto ipsa aut, deleniti qui adipisci molestiae. Praesentium, enim aut quisquam deleniti quam omnis suscipit aliquid impedit officia odit perferendis totam porro repudiandae aperiam tempore earum nobis ea qui? Rem nihil odio asperiores. Quod dolore explicabo vero voluptatem ipsa nulla dolorem odit modi ad magnam inventore amet facere illum accusantium recusandae, omnis totam quidem doloribus tenetur repellat vel earum reprehenderit quis non! Commodi veniam aperiam facilis nemo dolorem excepturi rem optio, doloribus sed, eius minima magnam illum animi provident. Omnis consectetur culpa quia ratione, sunt sint! Fugiat dolorem provident quod quos molestias error itaque facere ut id! Optio consectetur id dolorem impedit minus reprehenderit aliquam magni, necessitatibus cumque libero explicabo cupiditate atque eveniet amet accusamus inventore vero rerum eius itaque soluta. Vel soluta, deleniti dolores ex nisi commodi nesciunt similique molestias explicabo quod repellendus culpa vero minima magnam est numquam tempore laboriosam vitae expedita aliquam quos. At blanditiis, earum nihil optio alias harum non fuga corrupti nulla et, dolores, iusto adipisci! Ipsam quod sit perferendis sed omnis pariatur consequatur iusto, nihil officia distinctio, eveniet consequuntur ea tempore voluptas harum suscipit ut exercitationem, optio culpa? Quia sequi vitae fugit. Vero, molestiae facilis odio in at nisi temporibus magnam sint aut amet asperiores eveniet reprehenderit doloribus nulla dolor libero! Mollitia, iusto corrupti a asperiores eius corporis totam temporibus consectetur veniam nemo vero? Velit exercitationem aliquam non illo quae. Aspernatur impedit optio magni, totam placeat fugiat recusandae quae blanditiis error quod assumenda rem voluptate. Sunt modi vitae nostrum sapiente amet tempore voluptatibus ratione labore cum? Error a alias praesentium eligendi, molestias quas corrupti itaque in est porro assumenda fugit enim, beatae deleniti laudantium ipsa facilis! Ad aperiam debitis, sequi iure vel laboriosam, modi, dolore repudiandae non soluta nam ipsam. Veniam voluptatibus animi ratione quidem incidunt voluptates ab possimus sequi tenetur culpa iusto dolores esse dignissimos laboriosam blanditiis expedita aliquam soluta quia fugiat, labore eligendi sit illo atque aspernatur? Sapiente laboriosam mollitia eaque vel necessitatibus nobis rem, neque exercitationem fugit, quos porro doloribus. Aspernatur magnam accusantium, sed minus velit pariatur ad excepturi, quasi fuga tempore sapiente perspiciatis reprehenderit neque perferendis veniam dicta cupiditate error ipsum cumque fugit. Doloremque fuga error quaerat temporibus laudantium soluta quibusdam asperiores? Explicabo repudiandae quos eligendi ipsam, soluta vitae animi voluptatum voluptates dolore porro necessitatibus ullam. Ad perspiciatis veniam eveniet at blanditiis quae optio earum ullam similique, saepe aspernatur ipsa corrupti deserunt pariatur dolores obcaecati est necessitatibus laborum minus modi quod. Maxime, totam culpa?</p>
+
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        let sidenav =document.querySelector(".links");
+        let btn=document.querySelector("#btn");
+        let overlay=document.querySelector(".overlay");
+
+        btn.addEventListener("click",()=>{
+            sidenav.classList.add("open");
+            overlay.classList.add("open");
+        });
+        overlay.addEventListener("click",()=>{
+            sidenav.classList.remove("open")
+            overlay.classList.remove("open");
+
+        });
+    })
+</script>
+</html>

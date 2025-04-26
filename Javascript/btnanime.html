@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: hotpink;
+        }
+        button{
+            padding: 25px 45px;
+            background-color: transparent;
+            border-radius: 10px;
+            width: 200px;
+            border: 2px solid white;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            cursor: pointer;
+          
+            
+        }
+        .layer{
+            position: absolute;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            transition: 0.5s;
+            z-index: -1;
+           
+        }
+        button:hover{
+            color: darkblue;
+        
+        }
+        button:hover .layer{
+            width: 100%;
+           
+            
+
+        }
+    </style>
+    <button>
+        <span class="layer"></span>
+        click Me
+    </button>
+</body>
+</html>

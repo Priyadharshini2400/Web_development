@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            place-items: center;
+        }
+      
+      
+    </style>
+    <h1>student form</h1>
+    
+        <form action="" id="form1">
+            <table border="1" cellpadding="10px" style="width: 300px;">
+                <tr>
+                    <td><label for="">Name :</label></td><td><input type="text" placeholder="Enter your name" style="width: 100%;"  id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Age :</label></td><td><input type="text" placeholder="Enter your Age" style="width: 100%;" id="age"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Gender</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male" id="male1" required><label for="male1">Male</label>
+                        <input type="radio" name="gender" value="female" id="female1" required><label for="female1">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Course :</label></td>
+                    <td>
+                        <select style="width: 100%;" id="select">
+                            <option value="python">Python</option>
+                            <option value="C++">C++</option>
+                            <option value="java">Java</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Email :</label></td>
+                    <td><input type="email" style="width: 100%;" id="email"></td>
+                </tr>
+                <tr >
+                    <td colspan="2" ><button style="width: 100%;" id="submit">submit</button></td>
+                </tr>
+            </table>
+        </form>
+
+
+        <table border="1" cellpadding="10px" style="margin-top: 50px;" id="student">
+            <tr>
+                <th>Name :</th> 
+                <th>Age :</th>
+                <th>Gender :</th>
+                <th>Course :</th>
+                <th>Email :</th>
+                <th>Action </th>
+            </tr>
+        </table>
+    
+
+   
+</body>
+<script>
+let student=document.getElementById("student")
+let name =document.getElementById("name")
+let age=document.getElementById("age")
+// let gender=document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : "not selected";
+let select=document.getElementById("select")
+let email =document.getElementById("email")
+let submit=document.getElementById("submit")
+let form=document.getElementById("form1")
+
+
+
+
+
+submit.addEventListener("click",function(event){
+
+    event.preventDefault()
+
+
+    let gender = document.querySelector('input[name="gender"]:checked') 
+                 ? document.querySelector('input[name="gender"]:checked').value 
+                 : "Not selected";
+                 
+    
+    let tr =document.createElement("tr");
+    tr.innerHTML=`<td>${name.value}</td><td>${age.value}</td><td>${gender}</td><td>${select.value}</td><td>${email.value}</td> <td><button onclick="del(event)">Delet</button></td>`
+    student.append(tr)
+
+    form.reset()
+   
+
+})
+function del(event){
+    let row=event.target.closest("tr")
+    row.remove()  
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

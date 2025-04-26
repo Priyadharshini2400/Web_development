@@ -1,0 +1,193 @@
+
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+
+header{
+    background-color:white;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 9%;
+}
+.banner{
+    position: relative;
+}
+.banner img {
+    width: 100%;
+    height: 420px;
+    
+}
+.banner h2{
+    background-color:rgba(0,0,0,0.5294117647058824);
+    text-align: center;
+    padding:20px;
+    border-radius: 5px;
+    position: absolute;
+    top:30%;
+    left:20px;
+    color: white;
+}
+.banner h2 span{
+    font-weight: bold;
+    font-size: 40px;
+}
+nav{
+    background-color: lightgray;
+    position: sticky;
+    top:65px;
+    z-index: 1;
+}
+nav li{
+    display: inline-block;
+    width: 25%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #17406c;
+   
+
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  
+}
+article{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+article h2,h3{
+    color: #17406c;
+}
+article p{
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+article ul li{
+    display: inline-block;
+    width: 25%;
+    padding: 20px;
+    margin: 50px;
+   
+  
+}
+article ul li img {
+    height: 300px;
+    width: 140%;
+    transition: transfrom 1s;
+    
+    
+
+   
+    
+    
+}
+article ul{
+      text-align:justify; 
+    
+    
+}
+.states{
+    background-color: #17406c;
+   
+    
+    
+}
+.state-list{
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    column-count: 4;
+    column-gap: 10px;
+    padding: 20px;
+    
+}
+section.states ul{
+    list-style: none;
+    width: 75%;
+    
+} 
+.state-list li{
+    line-height: 40px;
+}
+footer{
+    background-color: #17406c;
+    padding: 20px;
+}
+footer p{
+    color: white;
+    text-align: center;
+}
+hr{
+    width:50%;
+    margin: 0 auto;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+article p::first-letter{
+    font-size: 1.5em;
+}
+article p::selection{
+    background-color: lightgray;
+}
+ article ul li img:hover{
+
+    transform: scale(1.1);
+
+ }  
+ @media screen and (max-width:992px){
+    header{
+        position: static;
+        background-color: transparent;
+    }
+    nav{
+        top: 0;
+    }
+    .banner h2{
+        font-size :1.1em;
+    }
+ }
+
+
+
+
+ @media screen and (max-width:720px){
+    header{
+        background-color: transparent;
+        position: static;
+    }
+    .banner h2{
+        position: static;
+        border-radius: 0;
+        font-weight: 0.95em;
+        margin: 0;
+
+    }
+    nav li{
+        display: block;
+        line-height: 3px;
+        
+    }
+    nav{
+        top: 0;
+    }
+    article ul li{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+ }
+
+ 
+ 
+

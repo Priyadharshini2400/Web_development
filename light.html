@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>A Javascript changes the value of the src(source) attribute of an image</p>
+  
+    <script>
+        function light(sw){
+            var pic;
+            if (sw==0){
+                pic="light off.jpg";
+            }
+            else{
+                pic="light on.png";
+
+            }
+            document.getElementById("myimage").src=pic;
+        }
+    </script>
+      <img  id="myimage" src="light on.png" height="300" width="300">
+      <p>
+          <button type="button" onclick="light(1)">Light on</button>
+          <button type="button" onclick="light(0)">light off</button>
+  
+      </p>
+</body>
+</html>

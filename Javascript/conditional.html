@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //voter eligibility
+        let age =24;
+        if(age>=18){
+            console.log("you are eligible for vote")
+        }
+        else{
+            console.log("not eligible")
+        }
+
+        //mark eligibility
+        let score=70;
+        if(score>=35){
+            console.log('pass')
+
+        }
+        else{
+            console.log('fail')
+        }
+
+        //palindrome
+        let str='priya';
+        let reversed=str.slice().split('').reverse().join('')
+        if(str==reversed){
+            console.log("palindrome")
+
+        }
+        else{
+            console.log("not a palindrome")
+        }
+
+       
+
+       //mark validation
+        let mark=100;
+        if(mark>=35){
+            if(mark>100){
+                console.log("invalid")
+            }
+            else{
+                console.log("valid")
+            }
+        }
+        else{
+            console.log("fail")
+        }
+
+        //odd or even
+
+        let OddOrEven =20;
+        if(OddOrEven%2==0){
+            console.log("even")
+        }
+        else{
+            console.log("odd")
+        }
+
+        //leap Year
+        let year=2000;
+        if(year%4==0){
+            if(year%100==0){
+                if(year%400==0){
+                    console.log("leap year")
+                }
+                else{
+                    console.log("not a leap year")
+                }
+            }
+            else{
+                console.log("leap year")
+            }
+        }
+        else{
+            console.log('not a leap year')
+        }
+
+        //else if
+        let score1=95;
+        if(score1>=35&&score1<=50){
+            console.log('grade c')
+        }
+        else if(score1>50 && score1<=80){
+            console.log('grade b')
+        }
+        else if(score1>80 && score1<=100){
+            console.log('grade A')
+        }
+        else{
+            console.log('fail')
+        }
+
+        //switch case
+        let cholce = 2;
+
+        switch (cholce) {
+            case 1:
+                document.write("<h1> this is first floor </h1>" + '<br>');
+                break;
+            case 2:
+                document.write(" <h1> this is second floor </h1>" + '<br>');
+                break;
+            case 3:
+                document.write(" <h1> this is third floor </h1>" + '<br>');
+                break;
+            case 4:
+                document.write("<h1> this is fourth floor </h1>" + '<br>');
+                break
+            case 5:
+                document.write("<h1> this is fifth floor </h1>" + '<br>');
+                break;
+            case 6:
+                document.write("<h1> this is six floor </h1>" + '<br>');
+                break;
+            case 7:
+                document.write("<h1> this is seventh floor </h1>" + '<br>');
+                break;
+            default:
+                document.write("<h1> this is invalid floor </h1>" + '<br>');
+                break;    
+        }
+
+        // Function to perform reverse slicing
+        function reverseSlice(arr, start, end) {
+            return arr.slice(start, end).reverse();
+        }
+
+        // Example usage with an array
+        const array = [1, 2, 3, 4, 5, 6];
+        console.log(reverseSlice(array, 1, 5)); // Output: [5, 4, 3, 2]
+
+        // Example usage with a string
+        const string = "abcdef";
+        console.log(reverseSlice(string.split(''), 1, 5).join('')); // Output: "edcb"
+
+        //calculator
+
+        let operator="*"
+        let a=10;
+        let b=20;
+
+        switch (operator){
+            case "+" :
+                console.log(a+b);
+                break;
+            case "-":
+                console.log(a-b);
+                break;
+            case "/":
+                console.log(a/b);
+                break;
+            case "*":
+                console.log(a*b);
+                break;
+            case "**":
+                console.log(a**b);
+                break;
+            default:
+                console.log("Invalid");
+                break;
+        }
+
+
+    
+
+    </script>
+</body>
+</html>

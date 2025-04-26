@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .header{
+            padding:10px;
+            background-color:purple;
+            color: white;
+        }
+        .box li{
+            background-color:dodgerblue;
+            color: white;
+            margin-top: 5px;
+            padding: 10px;
+            position: relative;
+            left:-25px;
+            
+            
+        }
+        .box{
+             height:200px ;
+             width: 400px;
+             float: left;
+           
+        }
+        .what{
+            background-color: #33b5e5;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px white wheat;
+            height: 300px;
+            width: 320px;
+            float: right;
+            margin: 10px;
+        }
+        .line{
+            float: left;
+            width: 600px;
+            
+        }
+        .footer{
+            background-color: #33b5e5;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            position: absolute;
+            top: 450px;
+            width: 100%;
+           
+        }
+        @media screen and (max-width:900px){
+            .box{
+                float: none;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:900px){
+            .line{
+                float: none;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:900px){
+            .what{
+                float: none;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:900px){
+            .footer{
+                /* position: sticky; */
+                position: relative;
+                top:50px;
+        
+
+               
+            }
+        }
+  
+
+        
+    </style>
+    <div class="header">
+        <h1>Chania</h1>
+    </div>
+    <div class="box">
+        <ul>
+            <li>The Flight</li>
+            <li>The City</li>
+            <li>The Island</li>
+            <li>The Food</li>
+            
+
+        </ul>
+    </div>
+    <div class="line">
+        <h1> The city</h1>
+        <p>
+            Chania is the capital of chania  region on the island of crete. The city can be divided in two parts, the old town and the modern city.
+        </p>
+    </div>
+  
+    <div class="what">
+        <h1>What</h1>
+        <p>chania is a city on the island of crete</p>
+        <h1>where?</h1>
+        <p>Crete is a greek island in the mediterranean sea</p>
+        <h1>How?</h1>
+        <p>You can reach chania airport from all over Europe</p>
+    </div>
+    <div class="footer">
+        <p>Resize the browser window to see how content respond to the resizing</p>
+    </div>
+    
+</body>
+</html>

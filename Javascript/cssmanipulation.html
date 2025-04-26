@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+        }
+        .widthmax{
+            width: 500px;
+        }
+    </style>
+    <div id="box"></div>
+    <br>
+    <button onclick="change()">Change</button>
+    <button onclick="width()">width</button>
+
+    <script>
+        var box=document.getElementById("box")
+
+        function change()
+        {
+            box.style.backgroundColor="hotpink"
+
+        }
+        function width()
+        {
+            box.setAttribute("class","widthmax")
+        }
+    </script>
+</body>
+</html>

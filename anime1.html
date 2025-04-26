@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animation & Button Example</title>
+  <style>
+    /* Basic Reset & Body Setup */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Container with animation */
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Keyframes for fadeInUp animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Style */
+    .my-button {
+      display: inline-block;
+      background: #3498db;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .my-button:hover {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+
+    .my-button:active {
+      animation: buttonPress 0.2s ease;
+    }
+
+    /* Button active press animation */
+    @keyframes buttonPress {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome</h1>
+    <p>This is an example of a layout with CSS animation and a stylish button.</p>
+    <button class="my-button">Click Me</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #border{
+            border:none;
+            width: 260px;
+            height: 160px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 2px 2px 10px 0px black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        input[type="text"]{
+            padding:5px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        #add{
+            color:white;
+            background-color: #4CAF50;
+            border: none;
+            border-color: #4CAF50;
+            padding: 10px 45px;
+            border-radius: 5px;
+        }
+        #clear{
+            color:white;
+            background-color: #f44336;
+            border: none;
+            border-color: #f44336;
+            padding: 10px 45px;
+
+        }
+        h3{
+            text-align: center;
+        }
+
+        
+    </style>
+    <div id="border">
+        <label for="">Number 1</label>
+        <input id="val1" type="text"><br><br>
+        <label for="">Number 2</label>
+        <input type="text" id="val2"><br><br>
+        <button id="add" onclick="add()">Submit</button>
+        <button id="clear" onclick="clr()">Clear</button><br>
+        <br><h3 id="result"></h3>
+        
+    </div>
+    
+
+</body>
+<script>
+    let num1 =document.getElementById("val1")
+    let num2 =document.getElementById("val2")
+    let result =document.getElementById("result")
+
+    function add(){
+        out=Number(num1.value)+Number(num2.value)
+        result.innerHTML='Result'+out
+    }
+    function clr(){
+        // result.style.display="none"
+        num1.value='';
+        num2.value='';
+        result.innerHTML='';
+    }
+
+    // function add()
+    // {
+    //     var num1,num2,out;
+    //     num1=Number(document.getElementById('val1').value);
+    //     num2=Number(document.getElementById('val2').value);
+    //     out=num1+num2;
+    //     document.getElementById('result').innerHTML='total:'+out;
+    // }
+    // function clr(){
+    //     document.getElementById('val1').value='';
+    //     document.getElementById('val2').value='';
+    //     document.getElementById('result').innerHTML='';
+    // }
+
+
+    
+</script>
+</html>

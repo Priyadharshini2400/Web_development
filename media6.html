@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        .container{
+            height: 500px;
+            width: 380px;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 3px solid black;
+            margin: 0 auto;
+           
+            
+            
+
+        }
+        .para{
+            height: 150px;
+            width: 310px;
+            border: 3px solid black;
+            padding: 10px;
+        }
+        .photo img{
+            margin-top: 25px;
+           
+            height: 200px;
+            width:100%
+          
+        }
+        @media screen and (max-width:700px){
+            .container{
+                width: 600px;
+                height: 300px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                border: 3px solid black;
+                flex-basis: 40%;
+                position: relative;
+            
+            }
+            .photo{
+                float: left;
+                display:inline;
+                width: 250px;
+                
+                
+            }
+             .photo img{
+                height: 260px;
+                width: 90%;
+                margin-left: 6px;
+            } 
+            .para{
+                width: 300px;
+                position: absolute;
+                left: 250px;
+                top: 50px;
+
+            }
+
+         
+        }
+    </style>
+    <div class="container">
+        <div class="photo">
+            <img src="./image/temple.jpeg" alt="photo">
+        </div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, libero ipsum delectus molestias eveniet magni nam at accusantium voluptate voluptatem hic in distinctio debitis veniam accusamus pariatur? Quia, delectus temporibus?</p>
+        </div>
+      
+        
+    </div>
+    
+</body>
+</html>

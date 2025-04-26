@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       * {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(26, 25, 25);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel-container {
+  background-color: #1d1c1c;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 700px;
+  color: #fff;
+}
+
+.ratings-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+.rating {
+  flex: 1;
+  padding: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  background-color: #ccc;
+  transition: 1s ease;
+}
+
+.rating .icon {
+  width: 40px;
+  font-size: 5rem;
+  margin-right: 10px;
+}
+
+.rating small {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 30px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* JavaScript */
+.heart {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+    </style>
+
+    
+    <section class="panel-container" id="panel">
+        <strong>Your Feedback 😉</strong>
+
+
+        <div class="ratings-container">
+
+
+
+          <div class="container">
+            <div class="rating">
+              <div class="icon">😒</div>
+              <small>Unhappy</small>
+            </div>
+
+
+            <div class="rating">
+              <div class="icon">😐</div>
+              <small>Neutral</small>
+            </div>
+
+
+            <div class="rating">
+              <div class="icon">😆</div>
+              <small>Satisfied</small>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        <button class="btn" id="send">Send Feedback</button>
+
+
+      </section>
+</body>
+<script>
+
+
+            const ratings = document.querySelectorAll(".rating");
+            const ratingsContainer = document.querySelector(".ratings-container");
+            const sendBtn = document.querySelector("#send");
+            const panel = document.querySelector("#panel");
+
+            let selectedRating = "Satisfied";
+
+            ratingsContainer.addEventListener("click", (e) => {
+            if (e.target.parentNode.classList.contains("rating")) {
+                removeActives();
+                e.target.parentNode.classList.add("active");
+                selectedRating = e.target.nextElementSibling.innerHTML;
+            }
+            });
+
+
+
+            sendBtn.addEventListener("click", () => {
+            panel.innerHTML = `
+                    <p class="heart">💖</p>
+                    <strong>Thank You! </strong>
+                    <br>
+                    <strong>Feedback: ${selectedRating} </strong>
+                `;
+            });
+
+            function removeActives() {
+            for (let i = 0; i < ratings.length; i++) {
+                ratings[i].classList.remove("active");
+            }
+            }
+
+
+
+
+
+</script>
+</html>

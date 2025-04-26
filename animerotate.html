@@ -1,0 +1,25 @@
+<body>
+    <style>
+        .animation{
+            transform-origin: 50% 50% 0px;
+            animation-name: Imarotate3danime;
+            animation-duration:20s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+        @keyframes Imarotate3danime{
+            50% {transform: rotate3d(2,0,1,180deg);}
+            100% {transform:rotate3d(2,0,1,360deg);}
+        }
+    </style>
+
+
+
+
+    <svg width="900" height="600">
+        <image id =" testing" href="/image/maha.webp" x="190" y="140" height="400" class="animation">
+
+        </image>
+            
+     </svg>
+</body>

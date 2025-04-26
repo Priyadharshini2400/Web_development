@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        @keyframes anime1{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+
+
+
+        }
+        @keyframes anime2{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .box1::before{
+            content: "";
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            position: absolute;
+            animation-name: anime1;
+            animation-duration: 2s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            z-index: 1;
+        }
+
+        .box1::after{
+            content: "";
+            height: 200px;
+            width: 200px;
+            background-color:black;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: anime2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; 
+
+           
+
+        }
+        .hello{
+            height: 100px;
+            width: 100px;
+            background-color:white;
+            position: absolute;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+           
+
+    </style>
+    <div class="container">
+        <div class="box1">
+            
+        </div>
+        <div class="hello">hello</div>
+    </div>
+</body>
+</html>

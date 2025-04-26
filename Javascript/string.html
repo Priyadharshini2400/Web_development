@@ -1,0 +1,81 @@
+<script>
+    var a ="Priya"
+    document.write(a, "<br>")
+    // console.log(a)
+    console.log(typeof a)
+    console.log(a.length)
+    console.log(a[0])
+    console.log(a.slice(0,4) )
+
+    for( i=0;i<=(a.length-1);i++){
+        console.log(a[i])
+    }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    //displaying string ,finding data type,& lenght of a string
+    var str="iphone,sony,moto,nokia,oppo,realme";
+    document.write('defined string is '+' '+str+'<br>')
+    document.write('Type of str is '+' '+ typeof(str) +'<br>')
+    document.write('length of string is '+' '+str.length+'<br>')
+
+    //Accessing element using index position
+    document.write('string available at 8th position is '+' '+str[8]+'<br>')
+    document.write('string at 5th position is '+' '+str.charAt(5)+'<br>') //display letter at index position 5
+    document.write('string unicode char at 6th position is '+' '+str.charCodeAt(6)+'<br>') //display unicode char value
+    document.write('string at 3rd position is  ' +' '+str.at(3)+'<br>')
+
+    //slicing string
+    document.write('sliced part of string is '+ ' '+str.slice(8,15)+'<br>')
+    document.write('slice part using negative index is '+' '+str.slice(-10,-2)+'<br>')
+    document.write('sub string value is '+' '+str.substring(8,15)+'<br>')  //display string from start to end value
+    document.write('sliced string is '+' '+str.substr(4,8)+'<br>') //displays string from index value to length of string
+
+    //changing into uppercase and lowercase of string 
+    var str1="New beginning of life"
+    document.write(str1.toUpperCase()+'<br>')
+    document.write(str1.toLowerCase()+'<br>')
+
+    //Accessing string in special character
+
+    var str2='Today\'s World'
+    document.write(str2+'<br>')
+    var str3= "Most important thing in life is \"DEDICATION \" to achieve success"
+    document.write(str3+'<br>')
+    var str4='Address is 2\\3'
+    document.write(str4+'<br>')
+
+
+    //accessing Multiline String
+    var chr =`hello Everone 
+    Welcome to Tamilnadu Tourism 
+    Enjoy this trip
+    have a nice day`
+    document.write( 'Multiline string is '+'' +chr+'<br>')
+
+
+    //Trimming string
+    var Msg="  General Medicine  "
+    document.write(Msg.trim()+'<br>')//remove unwanted space.
+    var Msg1="GM "
+    document.write(Msg.trimStart()+'<br>')//remove unwanted space in starting.
+    document.write(Msg1.trimEnd()+'<br>')// remove unwanted space in ending.
+
+    //Replace string
+    var rank='University student secured first rank in University level'
+    document.write(rank.replace('University','college'+'<br>'))//replace the first word 
+    document.write(rank.replaceAll('University','college'+'<br>'))//replace all words regarding university
+    document.write('<br>'+typeof(rank)+'<br>')
+    var W=rank.split('in')//shows same line
+    document.write(W)
+
+
+
+
+
+
+
+
+</script>

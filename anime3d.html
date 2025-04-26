@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+  .aquarium {
+    top: 130px; left: 250px; width: 400px; height: 400px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation-name: aquaCube3dRotation;
+    animation-duration: 20s;
+    animation-delay: 1s; 
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; 
+
+    }
+    @keyframes aquaCube3dRotation {
+        from { transform: rotate3d(1,1,1,0); }
+        to   { transform: rotate3d(1,1,1,720deg); } 
+    }
+    div:hover {
+        animation-play-state: paused;
+    }
+    .aquarium div {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        opacity: 0.8;
+    }
+    .face1 {
+        top: 0;
+        left: 0;
+        transform: translate3d(0,0,200px); }
+    .face2 {
+        top: 0;
+        left: 0;
+        transform: translate3d(0,0,-200px); }
+    .face3 {
+        top: 0;
+        left: 100%;
+        transform-origin: 0 0;
+        transform: translate3d(0,0,200px) rotate3d(0,1,0,90deg); }
+    .face4 {
+        top: 100%;
+        left: 0;
+        transform-origin: 0 0;
+        transform: translate3d(0,0,200px) rotate3d(1,0,0,-90deg); }
+    .face5 {
+        top: 0;
+        right: 100%;
+        transform-origin: 100% 0;
+        transform: translate3d(0,0,200px) rotate3d(0,1,0,-90deg); }
+    .face6 {
+        bottom: 100%;
+        left: 0;
+        transform-origin: 0 100%;
+        transform: translate3d(0,0,200px) rotate3d(1,0,0,90deg); }
+
+
+    </style>
+    <div class="aquarium">
+        <div class="face1">
+            <img src="./image/1.jpg"/>
+        </div>
+        <div class="face2">
+            <img src="./image/2.jpg"/>
+        </div>
+        <div class="face3">
+            <img src="./image/3.jpg"/>
+        </div>
+        <div class="face4">
+            <img src="./image/4.jpg"/>
+        </div>
+        <div class="face5">
+            <img src="./image/5.jpg"/>
+        </div>
+        <div class="face6">
+            <img src="./image/6.jpg"/>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            padding: 20px;
+        }
+        .for{
+            height: 500px;
+            width: 50%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 25%;
+          
+           
+        }
+        label{
+            font-size: 30px;
+           
+        }
+        input[type="text"]{
+            outline: none;
+            border: 2px solid #ccc;
+            width: 100%;
+            padding: 15px;
+            border-radius: 3px;
+        }
+        .login{
+            padding: 15px;
+            background-color:lightgreen;
+            border-color: lawngreen;
+            margin-bottom: 20px;
+            font-size: 20px;
+            
+          
+        }
+        input[type="checkbox"]{
+            padding: 5px;
+        }
+     
+        .but{
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin-left: 25%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .sp{
+            text-decoration: underline;
+            color: blue;
+            padding: 0 10px;
+        }
+        .cancel{
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            border: transparent;
+           
+        }
+        .span input[type="checkbox"]{
+            appearance: none;
+            height: 15px;
+            width: 15px;
+            border: 1px solid black;
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        .span input[type="checkbox"]::before{
+            content: '';
+            font-size: 10px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+        .span{
+            display: block;
+            display: flex;
+            align-items: center;
+        }
+        .span input[type="checkbox"]:checked::before{
+            content: '\2713';
+            color: black;
+            color: white;
+        }
+        .span label{
+            font-size: 15px;
+        }
+        .span input[type="checkbox"]:checked{
+      
+            background-color: blue;
+           
+        }
+        .ff{
+            height: 600px;
+            width: 40%;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            margin-left: 30%;
+        }
+
+        
+    
+
+    
+    </style>
+    <h1>Login Form</h1>
+    
+
+    <form action="" class="ff" id="login-form">
+        <div class="for">
+            <label for="" >User Name</label><br>
+            <input type="text" placeholder="Enter Username" id="Username"><br>
+            <label for="" >Password</label><br>
+            <input type="text" placeholder="Enter password" id="password"><br>
+            <button class="login" type="submit">Login</button>
+            <div class="span">
+                <input type="checkbox" class="cb" id="rm "><label for="rm"  >Remember me</label></div>
+         
+        </div>
+
+       
+       <br>
+        <div class="but">
+            <button class="cancel">Cancel</button>
+            <a href="#"> Forgot<span class="sp">password?</span></a>
+
+        </div>
+    
+    </form>
+</body>
+
+
+
+<script>
+    const form =document.getElementById("login-form")
+    const user =document.getElementById("Username")
+    const pass =document.getElementById("password")
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        const uname =user.value;
+        const password=pass.value;
+        if(!Username){
+            document.write("please enter your username ")
+            return false;
+        }else if(password.length<8){
+            alert("password must be greater than 8 character")
+            return false;
+        }
+        document.write("login successful")
+    });
+  
+
+    
+
+
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript HTML DOM selection</h1>
+    <p>Hello Good Afternoon</p>
+    <p>Welcome To Aruvi Institute</p>
+    <p>Click the button to change the color of all</p>
+    <button onclick="clicks()">Click Me</button>
+</body>
+<script>
+    
+    function clicks(){
+        let collect=document.getElementsByTagName("p")
+        for(i=0;i<collect.length;i++){
+            collect[i].style.color="hotpink";
+        }
+
+    }
+</script>
+</html>

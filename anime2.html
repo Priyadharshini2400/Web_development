@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- anime1 -->
+
+
+
+    <!-- <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .box{
+            height: 60px;
+            width: 70px;
+            background-color: aqua;
+            position: relative;
+            animation: ex 2s linear 3s 3 normal;
+
+        }
+        @keyframes ex{
+            0%{
+                transform: translate(0px,0px);
+            }
+            100%
+            {
+                transform:translateX(50px);
+            }
+        }
+    </style>
+
+    <div class="box">
+        3d animation
+    </div> -->
+
+
+
+
+
+ <!-- anime2 -->
+
+    <!-- <style>
+        .body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .box{
+            height: 100px;
+            width:10px;
+            background-color:hotpink;
+            position: relative;
+            left: 300px;
+            top: 200px;
+            animation: ex 2s linear 3s 3 normal;
+            transform: skew(40deg,20deg);
+        }
+    </style>
+    <div class="box"> 
+
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- anime3 -->
+
+    <!-- <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            border: 2px solid blue;
+        }
+        .box{
+            height: 100px;
+            width: 10px;
+            background-color: aqua;
+            position: relative;
+        }
+        .box:hover{
+            transition: 1s;
+            /* transform: rotateY(360deg);
+            transform: rotateX(360deg);
+            transform: rotate(360deg); */
+            transform: rotate(360deg);
+            
+        }
+    </style>
+
+    <div class="main">
+        <div class="box"></div>
+   
+    </div>
+ -->
+
+ <!-- anime4 -->
+
+<!-- <style>
+    body{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border: 2px solid blue;
+    }
+    .box{
+        display: flex;
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .box:hover{
+        transition: 1s;
+        transform: perspective(200px) translateZ(133px);
+        /* transform: perspective(200px) translateZ(-133px); */
+        
+
+    }
+</style>
+<div class="main">
+    <div class="box"></div>
+</div> -->
+
+
+
+
+<!-- amime 5
+
+<style>
+    .box{
+        height: 400px;
+        width: 400px;
+        background-color:hotpink;
+        position: relative;
+        margin: 0 auto;
+        top: 200px;
+        
+       }
+       .round{
+        border-radius: 100%;
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background-color:crimson;
+        animation-name: anime;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-timing-function: ease-in-out;
+        animation-direction:forwards;
+
+       }
+       @keyframes anime{
+        from{transform:rotate3d(0,1,0,0)}
+        to{transform: rotate3d(0,1,0,360deg);}
+       }
+
+
+</style>
+<div class="box">
+    <div class="round"></div>
+</div>
+
+ -->
+
+ <!-- anime6 this code use transform-origin -->
+
+
+<!-- <style>
+    body{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border: 2px solid blue;
+    }
+    
+    .box{
+        display: flex;
+        height:100px ;
+        width: 150px;
+        background-color: aqua;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .box:hover{
+        transition: 1s;
+        transform: rotate(360deg);
+        /* transform-origin: center center; */
+        /* transform-origin: top left; */
+        /* transform-origin: bottom left; */
+        /* transform-origin: right left; */
+        /* transform-origin: right top; */
+        /* transform-origin: center left; */
+        transform-origin: 40px 50%;
+
+    
+    }
+   
+</style>
+
+<div class="main">
+<div class="box"> this code use rotate box position</div>
+</div>    -->
+
+
+
+<!-- anime7 -->
+
+    <!-- <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            border: 2px solid blue;
+        }
+        .box{
+            display: flex;
+            height: 50px;
+            width: 50px;
+            background-color: aquamarine;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:hover{
+            transition: 1s;
+            /* transform: perspective(50px) rotateY(-45deg);
+            transform: perspective(50px) scaleZ(1.5) rotateY(-45deg);
+            transform: perspective(50px) scaleZ(2.5) rotateY(-45deg);
+            transform: perspective(50px) scaleZ(1.5) rotateY(45deg);
+            transform: perspective(50px) scaleZ(1.5) rotateY(-45deg);
+            transform: perspective(50px) scaleZ(1.5) rotateY(-45deg); */
+            transform: perspective(50px) scaleZ(1.8) rotateY(45deg);
+        }
+    </style>
+    <div class="main">
+        <div class="box">
+           3d anime
+        </div>
+    </div> -->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- anime8 -->
+
+<!-- 
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            border: 2px solid blueviolet;
+        }
+        .parent{
+            display: flex;
+            height: 100px;
+            width: 200px;
+            border: 2px solid black;
+            perspective: 50px;
+            perspective-origin: 50px 40%;
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: relative;
+            margin: 5px;
+            transition: 1s;
+            transform: translateZ(20px) scale(1.2);
+        }
+    </style>
+
+    <div class="main">
+    <div class="parent">
+    <div class="box">3d</div>
+    <div class="box">3d</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+<!-- anime9 -->
+
+
+<!-- <style>
+     body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+        }
+        /*parent*/
+        .main{
+            display: flex;
+            height: 100px;
+            width: 200px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /*child*/
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            position: relative;
+        }
+        .box:hover{
+            transition: 1s;
+            /* transform: : perspective(100px)translate3d(x,y,z); */
+            /* transform: perspective(100px) translate3d(20px,30,50px); */
+            /* transform: perspective(100px) scale3d(2,4,1);
+            transform: perspective(100px)rotate3d(1,1,1,45deg); */
+            transform: perspective(100px) rotate3d(0,1,0,45deg);
+        }
+
+</style>
+<div class="main">
+    <div class="box">3d</div>
+</div> -->
+
+
+<!-- <style>
+    div{
+        background-color: chartreuse;
+        height: 100px;
+        width: 100px;
+        position: relative;
+        left: 200px;
+        top:200px;
+        text-align: center;
+        padding: 10px;
+        transition-duration: 1s;
+        transition-property: width;
+    }
+    div:hover{
+        width: 200px;
+        background-color: aqua;
+    }
+    div{
+        left: 0; position: relative; transition: 1s;
+    }
+    main:hover div{
+        left: 200px;
+    }
+
+    .ease{
+        transition-timing-function: ease;
+        background-color: red;
+        height: 20px;
+        width: 20px;
+    }
+    .linear{
+        transition-timing-function: linear;
+        background-color: chartreuse;
+        height: 20px;
+        width: 20px;
+    }
+    .ease-in{
+        transition-timing-function: ease-in;
+        background-color: rgb(38, 0, 255);
+        height: 20px;
+        width: 20px;
+    }
+    .ease-out{
+        transition-timing-function: ease-out;
+        background-color: rgb(255, 187, 0);
+        height: 20px;
+        width: 20px;
+    }
+    .ease-in-out{
+        transition-timing-function: ease-in-out;
+        background-color: rgb(243, 40, 101);
+        height: 20px;
+        width: 20px;
+    }
+</style>
+
+
+
+<main>
+    <p><strong>Ease</strong> : Show Start, fast middle, slow end</p>
+    <div class="ease"></div>
+    <p><strong>Linear</strong>:constart speed</p>
+    <div class="linear"></div>
+    <p><strong>Ease In</strong> :slow start, fast end</p>
+    <div class="ease-in"></div>
+    <p><strong>Ease Out</strong> : fast start, slow end</p>
+    <div class="ease-out"></div>
+    <p><strong>Ease in out</strong> : like ease, but with more</p>
+    <div class="ease-in-out"></div>
+</main>
+   -->
+
+
+ <!-- =================================================================================================================================================================== -->
+
+
+ <!-- step=3 transition-delay -->
+<!--  
+ <style>
+    div{
+        background-color: chartreuse;
+        height: 100px;
+        width: 100px;
+        position: relative;
+        left: 200px;
+        top: 200px;
+        padding: 10px;
+        transition-duration: 2s;
+        transition-property: width;
+        transition-delay: 2s;
+    }
+
+    div:hover{
+        width: 200px;
+        background-color: brown;
+    }
+
+ </style>
+
+ <div>Transition</div> 
+ -->
+
+
+ <!-- =================================================================================================================================================================== -->
+
+
+ <!-- step=4   transition shorthand-->
+
+ <!-- <style>
+    div{
+        background-color: chartreuse;
+        height: 100px;
+        width: 100px;
+        position: relative;
+        left: 200px;
+        top: 200px;
+        padding: 10px;
+        /* transition: background-color transition-duration transition-timing-function transition-delay  ,  transition-property transition-duration transition-timing-function transition-delay  ; this code oniy study */
+        transition:  background-color 2s linear 1s,width 3s ease-in 1s;
+      
+    }
+
+    div:hover{
+        width: 200px;
+        height: 200px;
+
+        background-color: aqua;
+    }
+
+ </style>
+
+ <div>Transitions</div>
+</style> -->
+
+
+
+<!-- anime10 -->
+
+
+
+
+<!-- <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .triangle{
+        width: 0;
+        height: 0;
+       border-left: 195px solid transparent;
+       border-right: 195px solid transparent;
+       border-bottom: 220px solid rebeccapurple;
+       position: relative;
+       display: flex;
+       justify-content: center;
+       
+
+    }
+    .triangle::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 219px;
+        background-color:black;
+        transform: translateX(-50%);
+        transition: 5s;
+        animation-name: rot;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 5;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+       align-items: center;
+       margin-top: 250px;
+    }
+    .round{
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        border-radius: 100%;
+        background-color: hotpink;
+        top: 50px;
+        transition: 5s;
+        animation-name: anime;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 5;
+        }
+
+        @keyframes anime{
+        from{transform:rotate3d(0,1,0,0)}
+        to{transform: rotate3d(0,1,0,360deg);}
+       }
+       @keyframes rot{
+        from{transform:rotate3d(0,1,0,0)}
+        to{transform: rotate3d(0,1,0,360deg);}
+        
+       }
+
+
+    
+</style>
+
+
+
+<div class="container">
+    <div class="triangle">
+        <div class="round">
+    
+        </div>
+    </div>
+    
+
+</div> -->
+
+<!-- animation-fill-mode -->
+
+<style>
+    body{
+        display: flex;
+        justify-content: space-around;
+        height: 100vh;
+        margin: 0;
+    }
+    .box1{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: normal;
+        animation-fill-mode: backwards;  
+    }
+    .box2{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: reverse;
+        animation-fill-mode: backwards;
+        
+    }
+    .box3{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+    }
+    .box4{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: backwards;  
+    }
+    .box5{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: normal;
+        animation-fill-mode: forwards; 
+    }
+    .box6{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: reverse;
+        animation-fill-mode: forwards; 
+    }
+    .box7{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards; 
+    }
+    .box8{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards; 
+    }
+    .box9{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: normal;
+        animation-fill-mode: both;
+    }
+    .box10{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: reverse;
+        animation-fill-mode: both; 
+    }
+    .box11{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+    .box12{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: both;
+    }
+   
+    @keyframes ex{
+        from{
+            top: 0px;
+            background-color: aqua;
+            color: black;
+        }
+        to{
+            top: 200px;
+            background-color: rgb(42, 165, 50);
+            color: white;
+        }
+    }
+</style>
+<!-- <div class="box1">normal-backwards</div>
+<div class="box2">reverse-backwards</div>
+<div class="box3">alternate-backwards</div> 
+<div class="box4">alternate-reverse-backwards</div> -->
+ <!-- <div class="box5">normal-forwards</div>
+<div class="box6">reverse-forwards</div>
+<div class="box7">alternate-forwards</div>
+<div class="box8">alternate-reverse-forwards</div> -->
+ <div class="box9">normal-both</div>
+<div class="box10">reverse-both</div>
+<div class="box11">alternate-both</div>
+<div class="box12">alternate-reverse-both</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .hover-box {
+  width: 200px;
+  height: 100px;
+  position: relative; 
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  overflow: hidden;
+  background: steelblue; /* Default background */
+}
+
+.hover-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: lightblue; /* New color */
+  transform: translateY(100%); /* Initially positioned outside (bottom) */
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-box:hover::before {
+  transform: translateY(0); /* Moves from bottom to top */
+}
+
+.hover-box span {
+  position: relative;
+  z-index: 1; /* Keeps text above the background animation */
+}
+
+ </style>
+
+<div class="hover-box"><span>Hover over me!</span></div>
+
+</body>
+</html>

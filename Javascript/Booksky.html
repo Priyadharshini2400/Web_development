@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: #FD6569;
+            padding: 20px;
+        }
+        .container{
+            padding: 20px;
+            margin-left: 10%;
+  
+           
+        }
+        .book{
+            width: 20%;
+            background-color: black;
+            color: white;
+            height: 250px;
+            border-radius: 20px;
+            padding: 20px;
+            display:inline-block;
+            vertical-align: top;
+          
+
+        }
+        .book button{
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FD6569;
+            border: 0;
+            
+         
+        }
+        .book h2{
+            color: #FD6569;
+        }
+        .btn{
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 20px;
+            border: 0;
+            border-radius: 100%;
+            font-size: 40px;
+            background-color: #FD6569;
+            position: fixed;
+            bottom: 10%;
+            right: 10%;
+            z-index: 3;
+        }
+        .overlay{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            position:absolute;
+            top:0;
+            left: 0px;
+            opacity: 0.8;
+            z-index: 1;
+            display: none;
+        }
+        .titlebar{
+            height: 210px;
+            width: 30%;
+            background-color: #FD6569;
+            position: absolute;
+            padding: 20px;
+            z-index: 2;
+            border-radius: 20px;
+            left: 35%;
+            top: 20%;
+            display: none;
+        }
+        .titlebar input{
+            width: 100%;
+            background-color: transparent;
+            margin-top: 10px;
+            border: 0;
+            border-bottom: 2px solid black;
+            margin: 10px;
+            
+         }
+         .titlebar input::placeholder{
+            color: black;
+         }
+         .titlebar textarea::placeholder{
+            color: black;
+         }
+         .titlebar textarea{
+            width: 100%;
+            background-color: transparent;
+            margin-top: 10px;
+            border: 0;
+            border: 2px solid black;
+            margin: 10px;}
+        .titlebar input:focus{
+            outline: none;
+        }
+        .titlebar textarea:focus{
+            outline: none;
+        }
+        .titlebar button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            
+            padding-bottom: 5px;
+            background-color:black;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+    <div class="nav">
+        <h1>Booksky</h1>
+    </div>
+    <div class="container">
+        <div class="book">
+            <h2>Hardworkleads to success</h2>
+            <h3>Priya</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id itaque officiis sequi in soluta explicabo voluptatibus laborum, ex libero assumenda quas tempore corrupti tenetur distinctio. A, distinctio! Reiciendis, qui? Dignissimos!</p>
+            <button onclick="del(event)">delet</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="titlebar">
+        <h2>Add Book</h2>
+        <form >
+            <input type="text" placeholder="Add book" id="addbook">
+            <input type="text" placeholder="add author" id="addauthor">
+            <textarea placeholder="short description" id="addtxt"></textarea>
+            <button id="additm">add</button>
+            <button id="cancel-btn">cancel</button>
+        </form>
+
+    </div>
+
+    <button class="btn">+</button>
+
+
+
+    <script>
+        var plus=document.querySelector(".btn")
+        var overlay=document.querySelector(".overlay")
+        var titlebar =document.querySelector(".titlebar")
+        var cancel=document.getElementById("cancel-btn")
+        plus.addEventListener("click",function(){
+            overlay.style.display="block"
+            titlebar.style.display="block"
+
+            
+        })
+        cancel.addEventListener("click",function(event){
+            event.preventDefault()
+            overlay.style.display="none"
+            titlebar.style.display="none"
+
+        })
+        //selecting element for add 
+        var container =document.querySelector(".container")
+        var additm=document.getElementById("additm")
+        var addbook=document.getElementById("addbook")
+        var addauthor=document.getElementById("addauthor")
+        var addtxt=document.getElementById("addtxt")
+
+        additm.addEventListener("click",function(event){
+            event.preventDefault()
+            var div=document.createElement("div")
+            div.setAttribute("class","book")
+            div.innerHTML=`<h2>${addbook.value}</h2>
+             <h3>${addauthor.value}</h3>
+            <p>${addtxt.value}</p>
+            <button onclick="del(event)">delet</button>`
+           
+            container.append(div)
+            overlay.style.display="none"
+            titlebar.style.display="none"
+
+        })
+        function del(event){
+            event.target.parentElement.remove()
+
+        }
+
+
+    </script>
+</body>
+</html>

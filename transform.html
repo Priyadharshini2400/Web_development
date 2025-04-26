@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:blueviolet;
+
+        }
+        .mainbox{
+           width: 300px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis:20%;
+            justify-content: space-around;
+           
+         }
+        .box1,.box2,.box3,.box4 ,.box5,.box6,.box7,.box8,.box9{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: 2px solid red;
+             position: relative;
+           
+         }
+        .box1::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+           animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+           animation-timing-function:ease-in-out;
+            transform-origin: 0 0;
+         }
+        @keyframes rotation{
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+
+            }
+            59%{
+                transform: rotate(180deg);
+
+            }
+            100%{
+                transform: rotate(360deg);
+
+            }
+        }
+         .box2{
+            display: flex;
+            justify-content: center; 
+        } 
+        .box2::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+           animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        animation-timing-function:ease-in-out;
+            transform-origin: top;
+      }
+
+        .box3{
+            display: flex;
+            justify-content: end; 
+        }
+        .box3::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+            transform-origin: 100% 0;
+    
+        }
+
+        .box4{
+            display: flex;
+          align-items: center;
+        }
+        .box4::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+            transform-origin: 0 50%;    
+        }
+
+        .box5{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .box5::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+             animation-timing-function:ease-in-out;
+           }
+
+        .box6{
+        
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .box6::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+            transform-origin:  100%  50%;
+          
+        }
+        .box7{
+         
+            display: flex;
+            align-items: end;
+            transform-origin: 0 100%;
+        }
+        .box7::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+           animation-timing-function:ease-in-out;
+            transform-origin: 0 100%;
+          
+        }
+
+        .box8{
+           display: flex;
+            justify-content: center;
+            align-items: end;
+            }
+        .box8::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+             animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+            transform-origin: 50% 100%;
+        }
+
+        .box9{
+            display: flex;
+            justify-content: end;
+            align-items: end;   
+        }
+        .box9::before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+            transform-origin: 100% 100%;
+        }
+        .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9{
+            height: 8px;
+        width: 8px;
+        background-color: red;
+        border-radius: 100%;
+        position: relative;
+        z-index: 1;
+       }
+</style>
+    <div class="container">
+        <div class="mainbox">
+            <div class="box1">
+                <div class="b1"></div>
+            </div>
+            <div class="box2">
+                <div class="b2"></div>
+            </div>
+            <div class="box3">
+                <div class="b3"></div>
+            </div>
+            <div class="box4">
+                <div class="b4"></div>
+            </div>
+            <div class="box5">
+                <div class="b5"></div>
+            </div>
+            <div class="box6">
+                <div class="b6"></div>
+            </div>
+            <div class="box7">
+                <div class="b7"></div>
+            </div>
+            <div class="box8">
+                <div class="b8"></div>
+            </div>
+            <div class="box9">
+                <div class="b9"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

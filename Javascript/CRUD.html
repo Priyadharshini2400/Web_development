@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<body>
+    <div class="container mt-5" id="viewuser">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="btn btn-success" id="adduser">Add User</div>
+                <div class="btn btn-primary" id="getuser">Get User</div>
+                <div class="btn btn-warning" id="Updateuser">Update User</div>
+                <div class="btn btn-danger" id="removeuser">Remove User</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let adduser=document.getElementById("adduser");
+    let getuser=document.getElementById("getuser");
+    let Updateuser=document.getElementById("Updateuser");
+    let removeuser=document.getElementById("removeuser");
+    let viewuser=document.getElementById("viewuser");
+
+    adduser.addEventListener("click",()=>{
+        let uname=localStorage.getItem('username');
+        if(uname==null){
+            let data=prompt("Enter your name");
+            if(data===""){
+                let data=prompt("please enter your name");
+                alert("user input field is empty!");
+            }else{
+               localStorage.setItem('username',data);
+               alert("user added successfully")
+            }
+        }else{
+            alert("The user already exists")
+        }
+    });
+
+
+    getuser.addEventListener("click",()=>{
+        let uname=localStorage.getItem("username");
+        if(uname!==null){
+            let h3element =document.createElement("h3");
+            h3element.innerHTML="user name is:"+uname;
+            viewuser.appendChild(h3element)
+        }
+        else{
+            alert("username is empty!")
+        }
+    });
+    
+    Updateuser.addEventListener("click",()=>{
+        let username=localStorage.getItem("username")
+        if(username!==null){
+            let Updateusername=prompt("Enter your new name :"+username)
+            localStorage.setItem('username',Updateusername);
+            alert("user updated successfully");
+            location.reload();
+        }else{
+            alert('no user found to update')
+        }
+    })
+
+
+    removeuser.addEventListener("click",()=>{
+        let uname=localStorage.getItem("username");
+        let confirm1=confirm("Are you sure you want to remove this data?");
+        if(confirm1==true){
+            localStorage.removeItem("username")
+            location.reload();
+            alert("user removed successfully")
+        }else{
+            alert("username is empty!");
+        }
+    })
+
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        div{
+            text-align: center;
+            place-items: center;
+        }
+    </style>
+    <div>
+    <h1>Student Form</h1>
+    <form>
+    <table border="1" cellpadding="10px" cellpadding="10px">
+        <tr>
+            <td><label >Name</label></td><td><input type="text" placeholder="Enter your Name" style="padding: 5px;width: 300px;" id="name"></td>
+        </tr>
+        <tr>
+            <td><label>Age</label></td><td><input type="number" placeholder="Enter your Age"  style="padding: 5px;width: 300px;" id="age"></td>
+        
+        </tr>
+        <tr>
+            <td><label>Gender</label></td><td><input type="radio" name="gender" value="male" class="gender" checked>Male <input type="radio" name="gender" value="female" class="gender"     style="padding: 5px;" checked>Female</td>
+        </tr>
+        <tr>
+            <td><label>Course</label></td>
+            <td>
+            
+                <select style="width: 310px;padding:5px;" id="select">
+                    <option value="python">Python</option>
+                    <option value="Comuper science">computer science</option>
+                    <option value="java">Java</option>
+                </select>
+            
+
+            </td>
+
+        </tr>
+        <tr>
+            <td><label >Email</label></td><td><input type="email"  style="padding: 5px;width: 300px;" id="email"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <button style="padding: 5px; width: 380px; background-color: cadetblue;" id="saved">Save</button></td>
+
+      </tr>
+    </table>
+</form>
+<br>
+<br>
+
+<table border="1" cellpadding="10px" cellpadding="10px" id="Studenttable">
+    <tr class="row">
+        <th>Name</th><th>Age</th><th>Course</th><th>Gender</th><th>Email</th><th onclick="del(event)">Action</th>
+    </tr>
+
+</table>
+</div>
+
+<script>
+    var table=document.getElementById("Studenttable")
+    var saved=document.getElementById("saved")
+    var names=document.getElementById("name")
+    var age=document.getElementById("age")
+    var  select=document.getElementById("select")
+    var gender = document.querySelectorAll(".gender")
+    // gender.checked=true;
+    var email =document.getElementById("email")
+
+    saved.addEventListener("click",function(event){
+        event.preventDefault()
+        var row=document.createElement("tr")
+        row.setAttribute("class","row")
+        var genderValue = Array.from(gender).find(radio => radio.checked).value;
+        row.innerHTML=`<th>${names.value}</th><th>${age.value}</th><th>${select.value}</th><th>${genderValue}</th><th>${email.value}</th><th><button onclick="del(event)">Delet</button></th>`
+        table.append(row)
+    })
+
+    function del(event){
+        var row = event.target.closest('tr');
+        row.remove();
+    }
+
+   
+
+  
+
+</script>
+
+
+</body>
+</html>

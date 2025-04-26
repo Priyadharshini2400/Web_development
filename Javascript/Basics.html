@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Variables in Javascript</h1>
+    <ul>
+        <h2>Declaration of variable names</h2>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+    </ul>
+    <button type="button" onclick="document.write('hello world!')">click Me</button>
+    <br>
+    <script>
+            var name='priya'
+            document.write('My name is ',name,'<br>')
+            document.write(typeof(name),"<br>")
+            let d=90   //let is used to give one time //
+            document.write('the value is ',d,'<br>')
+            var b=80 //var used for multiple times//
+            document.write('the value is ',b,'<br>')
+            var x=10;
+            var y=20;
+            var z=30;
+            var w=x+y+z;
+            document.write('addition : ',w ,"<br>");
+            document.write(typeof(w),"<br>")
+             //---------------------------------------------------------------------------
+            //---------------------------------------------------------------------------
+            //---------------------------------------------------------------------------
+
+           /* var name='priya'
+            document.write('Hi',name,'good morning')
+            alert('bye bye!!!')*/
+            var a="Lets have a cup of coffee";
+            var b='He said "Hello" and left';
+            var c='we \'ll never give up.';
+            //printing variable values//
+            document.write(a+"<br>");
+            document.write(b+"<br>")
+            document.write(typeof(c),"<br>")
+            //To Find out types of data//
+            var f=true
+            document.write('this is ',f,'<br>')
+            document.write(typeof(f),'<br>')
+            var r
+            document.write(typeof(r),'<br>')
+            var n=null
+            document.write(typeof(n),'<br>')
+
+            //Infinity//
+            document.write(16/0);
+            document.write('<br>');
+            document.write(-16/0);
+            document.write('<br>');
+            document.write(16/-0);
+            document.write('<br>');
+            //javascript NaN-not a number//
+
+            document.write("some text"/2);
+            document.write('<br>');
+            document.write("some text"/2+10);
+            document.write('<br>');
+            document.write(Math.sqrt(-1),'<br>');
+            //Array concept//
+
+            var emp=['murugan','pooja','selva','moni','kalai',56.45];
+            document.write(emp,'<br>')
+            document.write(emp[2],'<br>')
+            var emp=new Array()//creation of Empty Array//
+            emp[0]='jayaram';
+            emp[1]='Athil';
+            emp[2]='Saravana'
+            emp[3]='Mahesh'
+            document.write(emp,'<br>')
+            document.write(emp.length,'<br>')
+
+            //alert,prompt,confirm
+
+            alert("Welcome to javascript");
+            var person1 =prompt("enter your name");
+           
+            var person=confirm("Is this your name......!!!")
+            alert("hello "+person1)
+
+
+
+         
+
+          
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+

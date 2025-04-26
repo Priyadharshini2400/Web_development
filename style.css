@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    max-width: 600px;
+}
+.container input[type="radio"]{
+    display: none;
+}
+.container label{
+    cursor: pointer;
+    background-color: aqua;
+    color: blueviolet;
+    display: block;
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: background 0.5s;
+
+}
+.container input:checked +label,
+.container label:hover{
+    background-color: brown
+}
+.ac{
+    background-color: azure;
+    overflow: hidden;
+    color:black;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+
+ 
+    
+}
+.ac p{
+    padding: 10px;
+    font-weight: 400;
+    color: black;
+
+}
+.container input:checked ~ .ac{
+    height: 150px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 class="message1">SetTimeout & clearTimeout</h1>
+    <h1 class="message2">SetInterval & ClearInterval</h1>
+    <h1 class="Time">Time</h1>
+    <button class="Ctimeout">clear Timeout</button>
+    <script>
+
+
+
+        // 1.setTimeout()
+        // 2.setInterval()
+        // 3.clearTimeout()
+        // 4.ClearInterval()
+
+
+        // setTimeout(()=>{
+        //     alert("hello world")
+        // },3000);
+
+        //setInterval()
+
+
+
+
+
+        let message1=document.querySelector(".message1");
+        let message2=document.querySelector(".message2");
+        let Ctimeout =document.querySelector('.Ctimeout');
+        let Time = document.querySelector('.Time');
+
+        let CtimeoutID =setTimeout(()=>{
+            message1.style.color="green";
+            message2.style.color="blue";
+        },3000);
+
+        Ctimeout.addEventListener("click",()=>{
+            clearTimeout(CtimeoutID)
+        })
+
+        let count=1;
+        let SInterValID=setInterval(()=>{
+            Time.innerHTML=count;
+            if(count==8){
+                clearInterval(SInterValID);
+                Time.innerHTML="Time is over";
+            }
+            count++
+        },1000);
+
+
+
+    
+
+
+    </script>
+</body>
+</html>

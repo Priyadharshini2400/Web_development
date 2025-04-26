@@ -1,0 +1,39 @@
+<style>
+    body{
+    background-color: #333;
+    color: #fff;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(40) 1s 1 normal both, 
+    blinkingCursor 400ms steps(40) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 50%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+</style>
+<!-- HTML -->
+<p class="cursor typewriter-animation">
+    Hi there, I'm a Typewriter Animation made in pure CSS!

@@ -1,0 +1,42 @@
+<body>
+    <style>
+        div{
+            height: 100px;
+            width:100px;
+            background-color: hotpink;
+            position: relative;
+            animation-name:colorchange;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            transform: background 5s ,transform 5s;
+            animation-play-state: running;
+        
+        }
+        div:hover{
+            transform:translateX(20px);
+            background-color: tomato;
+            animation-play-state: paused;
+        }
+
+        
+        @keyframes colorchange{
+            0% {
+                background-color:aqua;
+            }
+            50% {
+                background-color:brown;
+            }
+            100% {
+                background-color: chartreuse;
+            }
+
+        }
+    </style>
+    <h2>Css Animation  example</h2>
+    <div></div>
+    <p><b>Note:</b> The box continously changes color from yellow to aqua and back to yellow. When hoverd , it turns blue and shifts to the right.</p>
+    <h2>Css Animation  example</h2>
+    <div></div>
+    <p><b>Note:</b> The box continously changes color from yellow to aqua and back to yellow. When hoverd , it turns blue and shifts to the right.</p>
+    
+ </body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      
+        
+        .container{
+            height: 400px;
+            width: 300px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        
+           
+            
+            
+        }
+        .container p{
+            max-width: 300px;
+        }
+        .container::before {
+           content: "";  
+           position: absolute;
+           inset:0;
+           background-color:rgb(159, 9, 159); /* New color */
+           transform: translateY(100%); /*Initially positioned outside (bottom) */
+           transition: transform 0.5s ease-in-out;
+        }
+         .container:hover::before {
+           transform: translateY(0); /* Moves from bottom to top */
+        } 
+
+         .container h1, p, .one{
+             position: relative;
+            z-index: 1; /*Keeps text  above the background animation */
+        } 
+        .container:hover{
+            color: white;
+        }
+      
+         @media screen and (max-width:500px){
+            .container{
+                position: absolute;
+                top: 150px;
+                left: 40px;
+            }
+        }
+
+    </style>
+    <div class="center">
+        <div class="container">
+            <h1> Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut hic porro placeat cum maiores magnam voluptatum dicta perferendis exercitationem, odit, rerum nisi adipisci tempore, voluptatibus enim veniam sed explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, corrupti! Iure nobis odit veniam ducimus quam fuga aut at in officia quaerat excepturi pariatur nostrum deleniti, ullam nihil odio qui? </p>
+            <button style="background-color: black; color: white;" class="one">Read more</button>
+        </div>
+    </div>
+   
+</body>
+</html>

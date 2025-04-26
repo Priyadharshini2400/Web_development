@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .one{
+            background-color: green;
+            color: cornflowerblue;
+        }
+        @media screen and (max-width:900px){
+            .one{
+                background: blue;
+                color: beige;
+            }
+        }
+        @media screen and (max-width:700px){
+            .one{
+                background-color: brown;
+                color:aqua
+            }
+        }
+        .two{
+            height: 100px;
+            width: 100px;
+            float: left;
+            margin: 10px;
+           
+        }
+        @media screen and (max-width:600px){
+            .two{
+                float: none;
+            
+                
+               }
+        }
+        @media screen and (max-width:600px){
+            .two1{
+                display: flex;
+                justify-content: center;
+               }
+        }
+      
+    </style>
+    <div class="one">
+        <h1>Hello</h1>
+    </div>
+   <div class="two1">
+   <div class="two">
+    <img src="./image/temple.jpeg" height="100px" width="100px">
+   </div>
+   </div>
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis qui provident cupiditate hic nesciunt eaque error expedita mollitia voluptatem nemo?</p>
+</body>
+</html>

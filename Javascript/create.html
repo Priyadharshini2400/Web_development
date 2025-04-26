@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript HTML DOM</h2>
+    <p>Add a  new HTML Element</p>
+    <div id="div1">
+        <p id="p1">This is a paragraph</p>
+        <p id="p2">This is another paragraph</p>
+       
+    </div>
+    <button onclick="del()">Delet</button>
+</body>
+<script>
+    let para=document.createElement("p")
+    let node =document.createTextNode("This is new")
+    para.appendChild(node)
+    let div=document.getElementById("div1")
+    div.appendChild(para)
+    function del(){
+        let par =document.getElementById("p1")
+        par.remove()
+    
+    }
+
+    
+
+   
+</script>
+</html>

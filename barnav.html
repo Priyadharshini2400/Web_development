@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+        }
+        .logo{
+            font-size: 25px;
+            margin: 10px;
+            margin-left: 20px;
+        }
+        .navbar-links ul{
+            display: flex;
+            list-style: none;
+        }
+        .navbar-links ul li a{
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            display: block;
+        }
+        .navbar-links ul li{
+            padding: 0 25px;
+
+        }
+        .navbar-links ul li:hover{
+            background-color: #666;
+        }
+        .btn{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            height: 22px;
+            width: 30px;
+           display: none;
+           flex-direction: column;
+           justify-content: space-around;
+
+        }
+        .box{
+            height: 5px;
+            width: 100%;
+            background-color:white;
+        }
+        @media screen and (max-width:800px){
+            .btn{
+                display: flex;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+            }
+            .navbar{
+                flex-direction: column;
+                align-items: flex-start;
+               
+            }
+            .navbar-links ul {
+                flex-direction: column;
+                width: 100%;
+
+            }
+            .navbar-links ul li{
+                text-align: center;
+            }
+            .navbar-links.active{
+                display: flex;
+            }
+
+        }
+        
+    </style>
+    <div class="navbar">
+        <div class="logo">Stylish</div>
+        <a href="#" class="btn">
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="./skewnav.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Download</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let btn =document.getElementsByClassName("btn")[0];
+    let navbar =document.getElementsByClassName("navbar-links")[0];
+    btn.addEventListener("click",()=>{
+        navbar.classList.toggle('active');
+    });
+</script>
+</html>

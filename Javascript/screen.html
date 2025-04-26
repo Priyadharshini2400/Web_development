@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        *{
+            margin: 0;
+           padding: 0;       
+     }
+     .screen{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+     }
+     .msg{
+        height: 120px;
+        width: 300px;
+        background-color: white;
+        border-radius: 5px;
+        position:absolute;
+        z-index: 3;
+        left: 37%;
+        padding: 20px;
+        display: none;
+        
+     }
+     .btn{
+        background-color: red;
+        border-radius: 3px;
+        padding: 5px;
+        border: none;
+        color: white;
+
+     }
+     .show{
+        padding: 15px;
+        margin-top: 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 3px;
+        border: none;
+
+     }
+    </style>
+    <center><button class="show" onclick="update()">Show</button></center>
+    <div class="screen"></div>
+    <div class="msg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusamus, quo ex libero iusto perferendis. Iure incidunt cumque dolor perspiciatis?</P><br>
+        <button class="btn" onclick="del()">cancel</button>
+    </div>
+
+</body>
+<script>
+    
+    let screen =document.querySelector(".screen");
+    let msg =document.querySelector(".msg");
+
+    function update(){
+        screen.style.display="block";
+        msg.style.display="block";
+
+    }
+
+    function del(){
+        screen.style.display="none";
+        msg.style.display="none";
+    }
+
+
+</script>
+</html>

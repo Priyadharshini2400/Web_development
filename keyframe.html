@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            animation-name: anime1;
+            animation-duration: 6s;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate-reverse;
+            animation-timing-function:ease-in-out;
+            animation-fill-mode: backwards;
+        }
+        @keyframes anime{
+            from{background-color:crimson;}
+            to{background-color:blueviolet;}
+
+        }
+        @keyframes anime1{
+            0%{background-color: aqua; top: 20px;left: 20px;}
+            25%{background-color: blue; left: 220px; top: 20px; }
+            50%{background-color: blanchedalmond;top: 220px; left: 220px;}
+            75%{background-color: brown;top: 220px; left: 20px;}
+            100%{background-color: chartreuse;top: 20px;left: 20px;}
+        }
+    </style>
+    <div class="box"></div>
+</body>
+</html>

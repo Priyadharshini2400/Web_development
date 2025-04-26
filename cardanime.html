@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+   <style>
+    body{
+        margin: 0;
+        background-color: #2f3542;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        position: relative;
+        width: 350px;
+        height: 350px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+       
+    }
+    .card::before,
+    .card::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 4px;
+        transition: 0.5s;
+        background-color: #fff;
+        
+    }
+   
+    .card:hover::before{
+        transform: rotate(20deg);
+    }
+    .card:hover::after{
+        transform: rotate(10deg);
+    }
+    .img{
+       position: absolute;
+       inset: 10px;
+       transition: 0.5s;
+       z-index: 1;
+       
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   .img:hover{
+    bottom: 80px;
+
+   }
+   .detail{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 60px;
+    text-align: center;
+   }
+h2{
+    margin: 0;
+    padding: 0;
+
+}
+   </style>
+   
+
+
+
+    <div class="card">
+        <div class="img">
+            <img src="./image/4.jpg" alt="">
+
+        </div>
+        <div class="detail">
+            <h2>nature  <br> <span>wow</span></h2>
+        </div>
+    </div>
+</body>
+</html>

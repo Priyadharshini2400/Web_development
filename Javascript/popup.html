@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+    .overlay{
+        background-color: black;
+       
+       width: 100%;
+       height: 100vh;
+       opacity: o.8px;
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       opacity: 0.8;
+       display: none;
+       
+    }
+    .popup{
+        height: 100px;
+        width: 40%;
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        padding: 20px;
+        left: 30%;
+        display: none;
+        
+    }
+   </style>
+    <button onclick="show()">show</button>
+    <div class="overlay"></div>
+    <div class="popup">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum porro culpa qui, aut ad sequi, delectus ex totam dolorem debitis asperiores repudiandae vitae at cupiditate vero commodi eum! Soluta, est!</p>
+        <button onclick="cancel()">Cancel</button>
+
+    </div>
+    <button id="cl">pop</button>
+    <script>
+        var overlay =document.querySelector(".overlay")
+        var popup =document.querySelector(".popup")
+        var pop=document.getElementById("cl")
+        function show()
+        {
+           overlay.style.display="block" 
+           popup.style.display="block"
+        }
+        function cancel()
+        {
+            overlay.style.display="none" 
+           popup.style.display="none"
+
+        }
+        pop.addEventListener("click",function(){
+            alert("hi")
+        })
+        pop.addEventListener("mouseover",function(){
+            alert("Hi This is popup")
+        })
+    </script>
+</body>
+</html>

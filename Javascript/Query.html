@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Query selector All()</h2>
+    <div id="div">
+        <p>queryselectorAll() method in HTML is used to return the first element that matches a specified css selector in the document .</p>
+        <p>The queryselectorAll() method in HTML is used to return a collection of an element's child element that match a specified css selector(s).</p>
+        <p>querySelectorAll()</p>
+    </div>
+    <button onclick="change()">click me</button>
+    <script>
+        function change(){
+            let colors =document.getElementById("div").querySelectorAll("p")
+            for( let i=0;i<colors.length;i++){
+                colors[i].style.background="darkblue";
+                colors[i].style.color="white";
+            }
+        }
+    </script> -->
+
+
+
+
+
+    <!-- <h1>querySelector Example</h1>
+    <p id="description " class="main">
+        querySelector power is exceeded only by its mystery.
+    </p>
+    <div id="response">
+        It's not that mysterious,query selects elements using the same rules as CSS selectors
+    </div>
+
+    <script>
+        //selects the <p> using class selector
+        let main=document.querySelector(".main")
+        console.log(main.innerHTML.trim())
+        main.style.color="blue";
+
+        //select the<div> using tag selector
+            let response =document.querySelector("div")
+            console.log(response.innerHTML.trim());
+            response.style.color="red";
+    </script> -->
+
+
+
+
+
+    <!-- <p>This is an example of adding multiple events of different type to the same element.</p>
+    <p>click the following button to see the effect.</p>
+    <button id="btn">Click me</button>
+    <p id="para"></p>
+    <script>
+        function fun(){
+
+            btn.style.width="50px";
+            btn.style.height="50px";
+            btn.style.background="yellow";
+            btn.style.color="blue";
+
+        }
+
+        function fun1(){
+
+            document.getElementById("para").innerHTML="This is second function";
+
+        }
+        function fun2(){
+            btn.style.width="";
+            btn.style.height="";
+            btn.style.background="";
+            btn.style.color="";
+        }
+
+
+        var mybtn=document.getElementById("btn")
+        mybtn.addEventListener("mouseover",fun);
+        mybtn.addEventListener("click",fun1);
+        mybtn.addEventListener("mouseout",fun2);
+
+    </script> -->
+
+
+
+
+
+    <!-- <h2>Javscripts confirm BOX</h2>
+    <button onclick="myFunction()"> Try it</button>
+
+    <p id="demo"></p>
+
+    <script >
+        function myFunction(){
+            var txt;
+            if (confirm("press a button!")){
+                txt="You pressed ok!"
+            } else{
+                txt="You pressed Cancel!"
+            }
+            document.getElementById("demo").innerHTML=txt;
+        }
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Javscripts</h2>
+    <h3>The Window.location object</h3>
+
+    <p id="demo"></p>
+
+    <script>
+        // document.getElementById("demo").innerHTML=
+        // "The Full URL of this page is:<br>"+window.location.href;
+        // document.getElementById("demo").innerHTML=
+        // "page hostname: <br>"+ window.location.hostname;
+        document.getElementById("demo").innerHTML=
+        "browser inner window width : "+ window.innerWidth + "px<br>"+
+        "browser inner window height: "+ window.innerHeight + "px";
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

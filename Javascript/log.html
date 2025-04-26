@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #login-form{
+            user-select: none;
+        }
+
+    </style>
+    <center>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="type" id="username" name="username" placeholder="Enter Your Username">
+            <br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </center>
+</body>
+<script>
+
+    const form =document.getElementById("login-form")
+    const UsernameID=document.getElementById("username")
+    const passwordID=document.getElementById("password")
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        const Username=UsernameID.value;
+        const password=passwordID.value;
+        if(!username){
+            document.write("please enter your username!")
+            return false;
+        }
+        else if(password.length<8){
+            alert("password must be at least 8 characters long")
+            return false;
+
+        }
+        document.write("login successful")
+
+});
+
+
+
+
+</script>
+</html>

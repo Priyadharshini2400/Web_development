@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .text{
+            font-size: 60px;
+            color: #4c4c4c;
+            display: inline-block;
+            position: relative;
+            -webkit-text-stroke-width: 0px;
+            
+        }
+        .text::before{
+            position: absolute;
+            content: attr(data-letters);
+             inset: 0;
+            height: 0;
+            width: 100%;
+            color:violet;
+            overflow: hidden;
+            transition: 1s ease-in-out;
+            z-index: 1;
+
+        }
+        .text:hover::before{
+            height: 100%;
+
+        }
+    </style>
+    <h1 class="text" data-letters="Priyadharshini">Priyadharshini</h1>
+</body>
+</html>

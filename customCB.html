@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            width: 200wv;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        h1{
+            text-transform: uppercase;
+
+        }
+        .form-check{
+          
+            display: block;
+        }
+        .inputcheckbox input[type="checkbox"]{
+            -webkit-appearance: none ;
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 3px;
+            border: 1px solid black;
+        }
+        .inputcheckbox{
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .inputcheckbox label{
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .inputcheckbox input[type="checkbox"]::before{
+            content: '';
+            font-size: 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .correctans input[type="checkbox"]:checked::before{
+            content: '\2713';
+            color: green;
+        }
+
+        .wrongans input[type="checkbox"]:checked::before{
+            content: '\2715';
+            color: red;
+        }
+
+        .correctans input[type="checkbox"]:checked{
+            background-color: lawngreen;
+        }
+        .wrongans input[type="checkbox"]:checked{
+            background-color:lightcoral;
+        }
+
+        .wrongans input[type="checkbox"]:checked+label{
+            color: red;
+        }
+        .correctans input[type="checkbox"]:checked+label{
+            color:green;
+        }
+
+
+
+
+
+    </style>
+    <div class="container">
+        <h1>Custom check box</h1>
+        <div class="form-check">
+
+
+            <div class="inputcheckbox  correctans">
+                <input type="checkbox" id="correct" checked>
+                <label for="correct">Correct Answer</label>
+
+            </div>
+
+            <div class="inputcheckbox  wrongans">
+                <input type="checkbox" id="wrong" checked>
+                <label for="wrong">wrong Answer</label>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

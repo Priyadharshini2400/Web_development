@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- function concept -->
+    <h2>function in Javascript</h2>
+    <script>
+        function msg(){
+            alert("Hello !This is message")
+
+        }
+ 
+    </script>
+    <input type="button" onclick="msg()"value="call function"/>
+
+
+     <!-- function concept -->
+    <h2>Return function in Javascript</h2>
+    <script>
+        function add(a,b){
+            return a+b
+        }
+        let number1=parseFloat(prompt("Enter the number = "))
+        let number2=parseFloat(prompt("Enter the number = "))
+        let result=add(number1,number2)
+        document.write("The sum is:"+result)
+
+
+    </script>
+
+   <!-- function -->
+    <h1>Form </h1>
+    <form onsubmit="func()">
+        <label>Enter your Name</label>
+        <input type="text" name="unname" id="frm1">
+        <br>
+        <label >Enter your Mail ID</label>
+        <input type="email" name="email"><br>
+        <input type="submit">
+    </form>
+    <script >
+        function func(){
+       alert("successfully submitted")
+     }
+    </script>
+
+    <!-- function input -->
+     <h3>Sum of Two Numbers using Javascript Function</h3>
+     Enter the First Number: <input id="first"><br><br>
+     Enter the second Number: <input id="second"><br><br>
+     <button onclick="add()">Add</button>
+     <input id="answer">
+     <script>
+        function add(){
+            a=Number(document.getElementById('first').value)
+            b=Number(document.getElementById('second').value)
+            c=a+b
+            document.getElementById('answer').value=c;
+            }
+     </script>
+
+     <!-- color changing -->
+      <div style="background-color: aqua; height: 100px; width: 100px;" id="color">
+
+      </div>
+      <button onclick="coloradd()">change</button>
+      <script>
+        let color= document.getElementById("color")
+        function coloradd(){
+            color.style.backgroundColor="hotpink"
+
+        }
+      </script>
+
+
+<h2>Javascript Function</h2>
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+<p id="demo"></p>
+<script>
+    let demo=document.getElementById("demo")
+    function addp(p1,p2){
+        return p1*p2
+    }
+    demo.innerHTML=addp(4,5);
+    
+</script>
+
+
+
+    
+    
+</body>
+</html>

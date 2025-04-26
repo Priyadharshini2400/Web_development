@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arithmetic operation
+        var a = 10;
+        var b = 20;
+        var c = a + b;
+        document.write('Addition of two numbers is' + ' ' + c + '<br>');
+        var sub = a - b;            
+        document.write('Subtraction of two numbers is' + ' ' + sub + '<br>');
+        var mul = a * b;
+        document.write('Multiplication of two numbers is' + ' ' + mul + '<br>');
+        var div = a / b;
+        document.write('Division of two numbers is' + ' ' + div + '<br>');
+        var mod = a % b;
+        document.write('Modulus of two numbers is' + ' ' + mod + '<br>');
+        var inc = a++;
+        document.write('Increment of a is' + ' ' + inc + '<br>');
+        var dec = b--;
+        document.write('Decrement of b is' + ' ' + dec + '<br>');
+       
+        //comparision operation
+        var x = 10;
+        var y = 20; 
+        var z = 10;
+        document.write('x is equal to y is' + ' ' + (x == y) + '<br>');
+        document.write('x is equal to z is' + ' ' + (x == z) + '<br>');
+        document.write('x is not equal to y is' + ' ' + (x != y) + '<br>');
+        document.write('x is not equal to z is' + ' ' + (x != z) + '<br>');
+        document.write('x is greater than y is' + ' ' + (x > y) + '<br>');
+        document.write('x is greater than z is' + ' ' + (x > z) + '<br>');
+        document.write('x is less than y is' + ' ' + (x < y) + '<br>');
+        document.write('x is less than z is' + ' ' + (x < z) + '<br>');
+        document.write('x is greater than or equal to y is' + ' ' + (x >= y) + '<br>');
+        document.write('x is greater than or equal to z is' + ' ' + (x >= z) + '<br>');
+        document.write('x is less than or equal to y is' + ' ' + (x <= y) + '<br>');
+        document.write('x is less than or equal to z is' + ' ' + (x <= z) + '<br>');
+        //logical operation
+        var p = true;
+        var q = false;
+        document.write('p and q is' + ' ' + (p && q) + '<br>');
+        document.write('p or q is' + ' ' + (p || q) + '<br>');
+        document.write('not p is' + ' ' + (!p) + '<br>');
+        document.write('not q is' + ' ' + (!q) + '<br>');
+
+        //bitwise operation
+        var r = 2;
+        var s = 3;
+        document.write('r and s is' + ' ' + (r & s) + '<br>');
+        document.write('r or s is' + ' ' + (r | s) + '<br>');
+        document.write('r xor s is' + ' ' + (r ^ s) + '<br>');
+        document.write('not r is' + ' ' + (~r) + '<br>');
+        document.write('r left shift 1 is' + ' ' + (r << 1) + '<br>');
+        document.write('r right shift 1 is' + ' ' + (r >> 1) + '<br>');
+        document.write('r zero fill right shift 1 is' + ' ' + (r >>> 1) + '<br>');
+        //assignment operation
+        var t = 10;
+        var u = 20;
+        t += u;
+        document.write('t += u is' + ' ' + t + '<br>');
+        t -= u;
+        document.write('t -= u is' + ' ' + t + '<br>');
+        t *= u;
+        document.write('t *= u is' + ' ' + t + '<br>');
+        t /= u;
+        document.write('t /= u is' + ' ' + t + '<br>');
+        t %= u;
+        document.write('t %= u is' + ' ' + t + '<br>');
+        t <<= u;
+        document.write('t <<= u is' + ' ' + t + '<br>');
+        t >>= u;
+        document.write('t >>= u is' + ' ' + t + '<br>');
+        t >>>= u;
+        document.write('t >>>= u is' + ' ' + t + '<br>');
+        t &= u;
+        document.write('t &= u is' + ' ' + t + '<br>');
+        t |= u;
+        document.write('t |= u is' + ' ' + t + '<br>');
+        t ^= u;
+        document.write('t ^= u is' + ' ' + t + '<br>');
+
+        // //ternary operation
+        var v = 10;
+        var w = 20;
+        var result = (v > w) ? 'v is greater than w' : 'v is less than w';
+        document.write(result + '<br>');
+
+        // typeof operation
+        var x = 10;
+        var y = 'hello';
+        var z = true;
+        document.write(typeof(x) + '<br>');
+        document.write(typeof(y) + '<br>');
+        document.write(typeof(z) + '<br>');
+
+        // instance of operation
+       
+        var str = 'hello';
+        var num= 10;
+        var obj = new String('hello');
+
+        console.log(str instanceof String);
+        console.log(num instanceof Number);
+        console.log(obj instanceof String);
+        console.log(obj instanceof Object);
+
+
+        // delete operation
+        var car = {
+            model: 'BMW',
+            color: 'black'
+        };
+        document.write(car.model + '<br>');
+        delete car.model;
+        document.write(car.model + '<br>');
+        document.write(car.color+'<br>');
+        delete car.color;
+        document.write(car.color+'<br>')
+
+        //creating object
+
+        var emptyobject={}
+        emptyobject['Name']='Kani'
+        emptyobject['Degree']='ME'
+        emptyobject['Age']=34
+        emptyobject['Car Name']='BMW'
+        emptyobject['Model']=2021
+        emptyobject['Price']=10000000
+        /*console.log(emptyobject)
+        console.log('My name is:',emptyobject['Name'])
+        console.log('My car name is:',emptyobject['Car Name'])
+        console.log('Have Completed:',emptyobject['Degree'])*/
+        document.write('My name is: ',emptyobject["Name"],'<br>')
+        document.write('My car name is: ',emptyobject["Car Name"],'<br>')
+        document.write('Have Completed: ',emptyobject["Degree"],'<br>')
+
+        var student={
+            'Name':'Kani',
+            'Degree':'ME',
+            'Age':34
+        }
+        var car={
+            'Car Name':'BMW',
+            'Model':2021,
+            'Price':10000000
+        }
+        /*console.log(student)
+        console.log(car)
+        console.log('My name is:',student['Name'])*/
+        document.write('My name is: ',student["Name"],'<br>')
+        document.write('My car name is: ',car["Car Name"],'<br>')
+        document.write('Have Completed: ',student["Degree"],'<br>')
+
+        var user={}
+        user['name']='priya',
+        user['age']=24,
+        user['salary']='10 LPA'
+        console.log(user)
+   
+   
+   
+    </script>
+    
+</body>
+</html>
