@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .slider{
+            width: 900px;
+            height: 400px;
+            position: relative;
+           
+        }
+        .slider-items img{
+            width: 100%;
+            height: 400px;
+
+        }
+        .slider-items,
+        .hidden
+        {
+            display: none;
+        }
+        .active{
+            display: block;
+            animation: animate 0.5s;
+        }
+
+         @keyframes animate {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                transition: opacity linear;
+            }
+        } 
+
+
+        .slider-btn button{
+            height: 50px;
+            width: 50px;
+            background-color: rgba(0,0,0,0.5); 
+            border: none;
+            border-radius: 50%;
+           
+        }
+        i{
+            font-size: 45px;
+            font-weight: bold;
+            color: white;
+        }
+        .slider-btn{
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            visibility: hidden;
+           
+        }
+        .slider:hover .slider-btn{
+            visibility: visible;
+        }
+        .dot{
+            height: 7px;
+            width: 40px;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.3); 
+            
+        }
+        .dots{
+           
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            
+        }
+        .dot-active{
+            background-color:#ccc;
+        }
+    </style>
+    <div class="slider">
+
+
+        <div class="slider-items active">
+            <img src="./photo/pexel1.jpg" alt="">
+        </div>
+        <div class="slider-items">
+            <img src="./photo/pexel2.jpg" alt="">
+        </div>
+        <div class="slider-items">
+            <img src="./photo/pexel3.jpg" alt="">
+        </div>
+        <div class="slider-items">
+            <img src="./photo/pexel4.jpg" alt="">
+        </div>
+        <div class="slider-items">
+            <img src="./photo/pexel5.jpg" alt="">
+        </div>
+
+        <div class="slider-btn">
+            <button id="left">
+                
+                <i class="bi bi-arrow-left-circle"></i>
+            </button>
+            <button id="right">
+                <i class="bi bi-arrow-right-circle"></i>
+            </button>
+        </div>
+
+        <div class="dots">
+            
+        </div>
+
+    </div>
+</body>
+<script>
+    let sliderposition=0;
+    let slider=document.querySelectorAll(".slider-items")
+    let total=slider.length
+
+    let leftbtn=document.getElementById("left")
+    let rightbtn=document.getElementById("right")
+
+    rightbtn.addEventListener("click",function(){
+        nextslide()
+        
+    })
+    leftbtn.addEventListener("click",function(){
+        prevslide()
+        
+    })
+
+    function updateposition(){
+
+
+
+        slider.forEach(slide=>{
+            slide.classList.remove("active")
+            slide.classList.add("hidden")
+        })
+        slider[sliderposition].classList.add("active")
+
+        dots.forEach(dot=>{
+            dot.classList.remove("dot-active")
+            
+        })
+        dots[sliderposition].classList.add("dot-active")
+
+
+
+        
+    }
+
+    function nextslide(){
+        if(sliderposition==total-1){
+            sliderposition=0
+        }
+        else{
+            sliderposition++
+        }
+        updateposition()
+
+    }
+    function prevslide(){
+        if(sliderposition==0){
+            sliderposition=total-1
+        }
+        else{
+            sliderposition--
+        }
+        updateposition()
+
+    }
+
+    let dotcontainer =document.querySelector(".dots")
+
+    slider.forEach(slide=>{
+        let dot=document.createElement("div")
+        dot.classList.add("dot")
+        dotcontainer.appendChild(dot)
+    })
+
+    let dots =document.querySelectorAll(".dot")
+    dots[sliderposition].classList.add("dot-active")
+
+    dots.forEach((dot,index)=>{
+        dot.addEventListener("click",function(){
+            sliderposition=index;
+            updateposition()
+        })
+    })
+
+    setInterval(()=>{
+        if(sliderposition==total-1){
+            sliderposition=0
+        }
+        else{
+            sliderposition++
+        }
+        updateposition()
+    },5000)
+
+
+
+  
+
+
+</script>
+</html>

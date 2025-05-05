@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <style>
+        *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body{
+                background-color: #f0f0f0;
+                display: grid;
+                place-items: center;
+                height: 100vh;  
+            }
+            .container{ 
+                position: relative;
+                height: 300px;
+                width: 300px;
+            }
+
+            .outer{
+                height: 300px;
+                width: 300px;
+                padding: 38px;
+                /* border: 3px solid orangered; */
+                border-radius: 50%;
+                box-shadow: 8px 8px 20px -1px rgba(0, 0, 0, 0.10),
+                -8px -8px 20px -1px rgba(2255, 255, 255, 0.8);
+
+                /* box-shadow: 8px 8px 20px -1px green,
+                -8px -8px 20px -1px blue; */
+            }
+            .inner{
+                height: 220px;
+                width: 220px;
+                /* border: 3px solid orangered; */
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                box-shadow:
+                inset 8px 8px 20px -1px rgba(0, 0, 0, 0.3),
+                inset -8px -8px 20px -1px rgba(255, 255, 255, 0.9);
+
+                /* box-shadow: inset 8px 8px 20px -1px green,
+                inset -8px -8px 20px -1px blue;  */
+            }
+            #number{
+                font-size: 50px;
+                font-weight: 900;
+                color: rgb(33, 6, 110);
+                
+            }
+
+            circle{
+                fill: none;
+                stroke:url(#GradientColour);
+                stroke-width: 40px;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: animate 9s linear forwards;   
+
+            }
+
+            @keyframes animate{
+                100%{
+                    stroke-dashoffset: 180;
+                    /* 590  400 */
+                }
+            }
+            svg{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    </style>
+    <div class="container">
+        <div class="outer">
+            <div class="inner">
+                <div id="number">
+                    0%</div>
+            </div>
+        </div>
+        
+        <svg width="320px"  height="320px" >
+            <defs>
+                <linearGradient id="GradientColour">
+                   <stop offset="0%" stop-color="#12CBC4" />
+                   <stop offset="50%" stop-color="#1289A7" />
+                   <stop offset="100%" stop-color="#006266" />
+               </linearGradient>
+       
+           </defs>
+           <circle cx="150" cy="150" r="130" stroke-linecap="round" />
+       </svg>
+    </div>
+
+  
+
+
+</body>
+<script>
+    let number = document.getElementById("number");
+    let count = 0;
+
+setInterval(()=>{
+    if(count==100){
+        // 50 75
+        clearInterval();
+    }
+    else{
+        count+=1;
+        number.innerText = `${count}%`;
+    }
+},87);  
+
+// or use 80 52
+</script>
+</html>
