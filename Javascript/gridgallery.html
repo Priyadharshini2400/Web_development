@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #353b48;
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: repeat(3,300px);
+            height: 100vh;
+            gap: 20px;
+        }
+        .img{
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: center center;
+            border: 2px solid white;
+            border-radius: 3px;
+        }
+        #model{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(150,150,150,0.5);
+            top: 0;
+            position: fixed;
+            backdrop-filter: blur(2px);
+            display: none;
+           
+        }
+        #model.active{
+            display: grid;
+            place-items: center;
+        }
+        #img{
+            height: 70%;
+            width: 70%;
+            border: 2px solid white;
+            box-shadow: 1px 3px 20px rgba(0,0,0,0.5);
+
+        }
+        #btn{
+            height: 40px;
+            width: 40px;
+            background-color:tomato;
+            position: fixed;
+            top: 60px;
+            right: 15%;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            font-weight: bold;
+            box-shadow: 1px 3px 20px rgba(0,0,0,0.5);
+
+        }
+    </style>
+    <div class="container">
+        <img src="./photo/f1.jpg"  class="img">
+        <img src="./photo/f2.jpg"  class="img">
+        <img src="./photo/f3.jpg"  class="img">
+        <img src="./photo/f4.jpg"  class="img">
+        <img src="./photo/f5.jpg"  class="img">
+        <img src="./photo/f6.jpg"  class="img">
+    </div>
+    
+</body>
+<script>
+    let modal =document.createElement("div")
+
+    let btn = document.createElement("button");
+    btn.id = "btn";
+    btn.textContent = "X";
+    modal.appendChild(btn);
+   
+    modal.id="model"
+   
+    document.body.appendChild(modal)
+   
+
+
+    let images =document.querySelectorAll(".img")
+    images.forEach(image=>{
+        image.addEventListener("click",()=>{
+            modal.classList.add("active")
+
+
+            let old =document.getElementById("img")
+            if(old){
+                old.remove()
+            }
+
+
+            let img =document.createElement("img")
+            img.src=image.src
+            img.id="img"
+            modal.append(img)
+            
+            // while(modal.firstChild){
+            //     modal.removeChild(modal.firstChild)
+            // }
+            // modal.append(img)
+
+        })
+
+    })
+
+    btn.addEventListener("click",()=>{
+        modal.classList.remove("active")
+    })
+</script>
+</html>
