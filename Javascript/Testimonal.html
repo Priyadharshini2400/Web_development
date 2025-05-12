@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color:rgb(119, 216, 219);
+            display: grid;
+            place-items: center;
+        }
+        .container{
+            background-color: azure;
+            width: 600px;
+           
+            
+            display: flex;
+            position: relative;
+            flex-direction: column;
+           align-items: center;
+           text-align: center;
+           border-radius: 5px;
+           user-select: none;
+           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            
+        }
+       
+        .pic{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+       
+        
+        .pic img{
+            height: 90%;
+            width: 90%;
+            border-radius: 50%;
+            object-fit: cover;
+            z-index: 10;
+        }
+        .img-box{
+            display: flex;
+            margin: 10px;
+            gap: 30px;
+            
+
+        }
+        .container h2{
+            padding: 10px;
+            font-size: 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        span{
+            color: hotpink;
+        }
+        .container h2::after{
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 220px;
+            background-color:cadetblue ;
+            top:45px;
+            left: 20px;
+
+        }
+        .profile h4{
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .profile p{
+            font-size: 30px;
+        }
+        .profile{
+            margin-top: 45px;
+        }
+        .text p{
+            padding: 20px;
+
+        }
+        .leftbtn{
+            background-color: #ccc;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            font-size: 45px;
+            position: absolute;
+            left: -20px;
+            transform: translateY(350%);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            
+
+        }
+        .rightbtn{
+            background-color: #ccc;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            font-size: 45px;
+            position: absolute;
+            right: -20px;
+            transform: translateY(350%);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            
+        }
+       
+      
+        
+    </style>
+    <div class="container">
+        <div class="leftbtn"><i class="bi bi-arrow-left-circle " id="btnLeft"></i></div></i>
+        <h2>Testimonal <span>Design</span></h2>
+        <div class="img-box">
+            <div class="pic">
+                <img src="./photo/profile 2.webp" alt="1" id="img">
+            </div>
+            <div class="profile">
+                <h4 id="name">Priyadharshini</h4>
+                <p id="role">Developer</p>
+            </div>
+        </div>
+        <div class="text">
+            
+            <p id="text"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eveniet blanditiis sed saepe temporibus corrupti est velit illo excepturi et libero expedita delectus facilis illum aspernatur tenetur fugit, ducimus debitis! <i class="bi bi-quote left"></i></p>
+
+        </div>
+        <div class="rightbtn"><i class="bi bi-arrow-right-circle " id="btnRight"></i></div>
+    </div>
+</body>
+<script>
+
+    const data=[
+        {
+            id:1,
+            name:"priya",
+            job:"Software Developer" ,
+            imgs:"./photo/profile1.webp",
+            Text:"I am priya. I completed M.Sc Chemistry in Manonmanium sundaranar University and I have interest to work in IT field and I'm learning webdevelopment course",   
+    },
+    {
+            id:2,
+            name:"Dharshini",
+            job:"Tester" ,
+            imgs:"./photo/profile 2.webp",
+            Text:"I am Dharshu. I completed M.Sc Chemistry in Manonmanium sundaranar University and I have interest to work in IT field and I'm learning webdevelopment course",   
+    },
+    {
+           id:3,
+            name:"lilly",
+            job:"Grapic Designer" ,
+            imgs:"./photo/profile3.webp",
+            Text:"I am Lilly. I completed M.Sc Chemistry in Manonmanium sundaranar University and I have interest to work in IT field and I'm learning webdevelopment course",   
+    }
+
+    ]
+    let img =document.getElementById("img")
+    let name =document.getElementById("name")
+    let role =document.getElementById("role")
+    let text=document.getElementById("text")
+    let btnLeft=document.getElementById("btnLeft")
+    let btnRight=document.getElementById("btnRight")
+
+    let index=0
+    window.addEventListener("DOMContentLoaded",function(){
+        let testimonal =data[0]
+        loadcontent(testimonal)
+    })
+    function loadcontent(data){
+        img.src=data.imgs;
+        name.textContent=data.name;
+        role.textContent=data.job;
+        text.innerHTML=` <p id="text"><i class="bi bi-quote"></i> ${data.Text} <i class="bi bi-quote left"></i></p>`
+        
+        
+    }
+    
+    btnRight.addEventListener("click",function(){
+        index++
+        if(index>data.length-1){
+            index=0
+        }
+        loadcontent(data[index])
+
+    })
+    btnLeft.addEventListener("click",function(){
+        index--
+        if(index<0){
+            index=data.length-1
+        }
+        loadcontent(data[index])
+
+    })
+    function auto(){
+        index++
+        if(index>data.length-1){
+            index=0
+        }
+        if(index<0){
+            index=data.length-1
+        }
+        loadcontent(data[index])
+    }
+    setInterval(auto,3000);
+   
+
+
+
+
+
+</script>
+</html>
